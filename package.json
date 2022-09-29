@@ -1,26 +1,31 @@
 {
-  "name": "findable-components",
-  "version": "1.0.0",
+  "name": "@findable-no/findable-components",
+  "author": "Findable",
+  "version": "1.0.1",
   "description": "Findable components",
+  "keywords": [
+    "findable",
+    "components",
+    "react"
+  ],
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "homepage": "https://github.com/findable-no/findable-components#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/findable-no/findable-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/findable-no/findable-components/issues"
+  },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc && rollup -c"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/findable-no/findable-components.git"
-  },
-  "keywords": [
-    "testlib"
-  ],
-  "author": "Findable",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/findable-no/findable-components/issues"
-  },
-  "homepage": "https://github.com/findable-no/findable-components#readme",
   "eslintConfig": {
     "extends": [
       "react-app",
