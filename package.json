@@ -10,7 +10,7 @@
   ],
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org/"
   },
   "homepage": "https://github.com/findable-no/findable-components#readme",
   "repository": {
