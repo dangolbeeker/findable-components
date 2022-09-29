@@ -1,2 +1,0 @@
-"use strict";function t(t){return t&&"object"==typeof t&&"default"in t?t:{default:t}}Object.defineProperty(exports,"__esModule",{value:!0});var e=t(require("react")),r=function(){return r=Object.assign||function(t){for(var e,r=1,n=arguments.length;r<n;r++)for(var o in e=arguments[r])Object.prototype.hasOwnProperty.call(e,o)&&(t[o]=e[o]);return t},r.apply(this,arguments)};exports.Button=function(t){return e.default.createElement("button",r({},t),t.children)};
-//# sourceMappingURL=index.js.map
