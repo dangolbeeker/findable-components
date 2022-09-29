@@ -1,0 +1,47 @@
+{
+  "name": "findable-components",
+  "version": "1.0.0",
+  "description": "Findable components",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/findable-no/public_package_test.git"
+  },
+  "keywords": [
+    "testlib"
+  ],
+  "author": "Findable",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/findable-no/public_package_test/issues"
+  },
+  "homepage": "https://github.com/findable-no/public_package_test#readme",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "peerDependency": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "@rollup/plugin-typescript": "^8.5.0",
+    "@types/react": "^18.0.21",
+    "postcss": "^8.4.16",
+    "rollup": "^2.79.1",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.4"
+  }
+}
