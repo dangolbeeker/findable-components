@@ -31,8 +31,7 @@ export const Tree = ({
         }
 
         return (
-          // <div key={code + name} border={border}>
-          <div>
+          <div key={code + name} style={{ border: border, borderRadius: 8 }}>
             <Branch
               count={count}
               name={name}
@@ -41,7 +40,7 @@ export const Tree = ({
               overCheck={overCheck}
             >
               {({ overCheck }) => (
-                <div>
+                <div style={{ marginLeft: 24 }}>
                   {childrenAreFolders || children.length < 20 ? (
                     <Tree branches={children} overCheck={overCheck} />
                   ) : (

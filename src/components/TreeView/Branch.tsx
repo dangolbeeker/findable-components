@@ -4,9 +4,6 @@ import { useTreeView } from "./context";
 import type { Category } from "./types";
 import { Button, Checkbox } from "../";
 
-const defaultColor = "#696F8C";
-const emptyColor = " #8F95B2";
-
 export const Branch = ({
   count,
   name,
@@ -53,44 +50,33 @@ export const Branch = ({
   return (
     <div>
       <div
-      // display="flex"
-      // alignItems="center"
-      // position="sticky"
-      // className="sticky-background"
-      // zIndex={1}
-      // top={0}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          position: "sticky",
+          background: "white",
+          zIndex: 1,
+          top: 0,
+        }}
       >
         {selectMode && (
           <Checkbox
-          // margin={0}
-          // marginRight={8}
-          // checked={checked}
-          // onChange={handleCheckos}
+            style={{
+              marginRight: 8,
+            }}
+            checked={checked}
+            onChange={handleCheckos}
           />
         )}
         <Button
-          // appearance="minimal"
-          // paddingLeft="none"
-          // width="100%"
-          // display="flex"
-          // justifyContent="flex-start"
-          // fontWeight={700}
-          // iconBefore={
-          //   !selectMode ? (
-          //     !expanded ? (
-          //       <div>foldercloseicon</div>
-          //     ) : (
-          //       // <FolderCloseIcon
-          //       //   color={count > 0 ? defaultColor : emptyColor}
-          //       // />
-          //       <div>folderopenicon</div>
-
-          //       // <FolderOpenIcon color={count > 0 ? defaultColor : emptyColor} />
-          //     )
-          //   ) : null
-          // }
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            width: "100%",
+          }}
           onClick={() => setExpanded(!expanded)}
         >
+          <div>© </div>
           {branchName}
         </Button>
       </div>

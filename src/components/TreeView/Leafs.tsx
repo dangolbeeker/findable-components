@@ -26,23 +26,20 @@ export const Leaf = ({
 
   return (
     <div>
-      {/* <div display="flex" alignItems="center" paddingLeft={majorScale(1)}> */}
-      <div>
+      <div style={{ display: "flex", alignItems: "center", paddingLeft: 8 }}>
         {selectMode && (
           <Checkbox
-          // margin={0}
-          // marginRight={majorScale(1)}
-          // checked={!!selectedNodes.find((node) => node === code)}
-          // onChange={() => handleSelectNodeChange(code)}
+            style={{ margin: 0, marginRight: 8 }}
+            checked={!!selectedNodes.find((node) => node === code)}
+            onChange={() => handleSelectNodeChange(code)}
           />
         )}
         <Button
-          // appearance="minimal"
-          // paddingLeft="none"
-          // width="100%"
-          // display="flex"
-          // justifyContent="flex-start"
-          // iconBefore={!selectMode ? DocumentIcon : null}
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "flex-start",
+          }}
           onClick={() => {
             handleSelectLeaf(code);
           }}
