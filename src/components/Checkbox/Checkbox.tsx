@@ -1,9 +1,6 @@
 import React from 'react';
-import { CheckboxProps } from './Checkbox.types';
+import { Checkbox as CheckboxComponent, CheckboxProps } from '@mantine/core';
 
 export const Checkbox = (props: CheckboxProps) => (
-  <div>
-    <input type="checkbox" {...props} />
-    <label>label</label>
-  </div>
+  <CheckboxComponent {...props} />
 );

@@ -1,6 +1,6 @@
 import React from 'react';
-import { ButtonProps } from './Button.types';
+import { Button as ButtonComponent, ButtonProps } from '@mantine/core';
 
-export const Button = (props: ButtonProps) => {
-  return <button {...props}> {props.children}</button>;
-};
+export const Button = (props: ButtonProps) => (
+  <ButtonComponent {...props}>{props.children}</ButtonComponent>
+);
