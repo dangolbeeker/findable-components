@@ -5,9 +5,9 @@ import {
   areEqual,
   ListChildComponentProps,
 } from 'react-window';
+import memoize from 'memoize-one';
 import { IconFolder } from '@tabler/icons';
 
-import { memoizeOne } from './utils/memoize-one';
 import { useTreeView } from './context';
 import { Category } from './types';
 
@@ -73,7 +73,7 @@ const Row = memo(({ data, index, style }: ListChildComponentProps) => {
   );
 }, areEqual);
 
-const createItemData = memoizeOne(items => ({
+const createItemData = memoize(items => ({
   items,
 }));
 
