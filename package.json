@@ -44,7 +44,8 @@
     "trailingComma": "es5"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "homepage": "https://github.com/findable-no/findable-components#readme",
   "repository": {
