@@ -5,4 +5,9 @@ import { testdata } from './test-data';
 
 describe('Tree Component', () => {
   render(<Tree branches={testdata} />);
+
+  test('dummytest', () => {
+    const one = 1;
+    expect(one).toBe(1);
+  });
 });

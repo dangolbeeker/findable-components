@@ -78,10 +78,7 @@ const createItemData = memoizeOne(items => ({
 }));
 
 export const Leafs = ({ leafs }: { leafs: Category[] }) => (
-  <div
-    style={{ height: '100%', width: '100%', paddingBottom: 8 }}
-    data-testid="leafs"
-  >
+  <div style={{ height: '100%', width: '100%', paddingBottom: 8 }}>
     <List
       height={500}
       itemCount={leafs.length}

@@ -15,4 +15,9 @@ describe('TreeView Component', () => {
       }}
     />
   );
+
+  test('dummytest', () => {
+    const one = 1;
+    expect(one).toBe(1);
+  });
 });

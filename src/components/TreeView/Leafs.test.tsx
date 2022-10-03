@@ -5,4 +5,9 @@ import { testfiles } from './test-data';
 
 describe('Leafs Component', () => {
   render(<Leafs leafs={testfiles} />);
+
+  test('dummytest', () => {
+    const one = 1;
+    expect(one).toBe(1);
+  });
 });
