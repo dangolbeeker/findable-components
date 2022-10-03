@@ -1,5 +1,9 @@
-import { CheckboxProps } from "./Checkbox.types";
+import React from 'react';
+import { CheckboxProps } from './Checkbox.types';
 
 export const Checkbox = (props: CheckboxProps) => (
-  <input type="checkbox" {...props} style={{ ...props.style }} />
+  <div>
+    <input type="checkbox" {...props} />
+    <label>label</label>
+  </div>
 );

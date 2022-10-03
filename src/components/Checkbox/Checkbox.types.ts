@@ -1,2 +1,2 @@
 export interface CheckboxProps
-  extends React.ComponentPropsWithoutRef<"input"> {}
+  extends React.ComponentPropsWithoutRef<'input'> {}
