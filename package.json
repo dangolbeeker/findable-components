@@ -30,9 +30,6 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "peerDependencies": {
-    "react": ">=16"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
@@ -67,6 +64,9 @@
       "limit": "10 KB"
     }
   ],
+  "peerDependencies": {
+    "react": ">=16"
+  },
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@size-limit/preset-small-lib": "^8.1.0",

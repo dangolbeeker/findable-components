@@ -1,4 +1,4 @@
-export * from './TreeView';
-export * from './Tree';
-export * from './Branch';
-export * from './Leafs';
+export { TreeView } from './TreeView';
+export { Tree } from './Tree';
+export { Branch } from './Branch';
+export { Leaf, Leafs } from './Leafs';
