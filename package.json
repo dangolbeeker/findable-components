@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "tsdx watch",
-    "build": "tsdx build --target node",
+    "build": "tsdx build",
     "release": "np",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",

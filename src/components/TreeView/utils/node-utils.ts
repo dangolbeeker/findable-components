@@ -1,5 +1,5 @@
 import { isArray, isEmptyArray } from './array';
-import type { Category } from '../types';
+import { Category } from '../types';
 
 /**
  * Util for looping through all children to get total count of files
@@ -29,7 +29,7 @@ export const countFiles = (
  */
 export function checkIfFolders(nodes: Category[]): boolean {
   if (!isArray(nodes)) return false;
-  return Boolean(nodes?.find((node) => !node.isFile));
+  return Boolean(nodes?.find(node => !node.isFile));
 }
 
 /**
@@ -40,7 +40,7 @@ export function checkIfFolders(nodes: Category[]): boolean {
 export const getFiles = (nodes: Category[]): Category['code'][] => {
   if (!nodes || !isArray(nodes) || isEmptyArray(nodes)) return [];
 
-  return nodes.flatMap((node) =>
+  return nodes.flatMap(node =>
     !node.isFile && node.children ? getFiles(node.children) : node.code
   );
 };

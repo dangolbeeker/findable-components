@@ -44,7 +44,7 @@ export const TreeViewContextProvider: React.FC<ContextProps> = ({
     deselect?: boolean
   ) {
     if (!deselect) {
-      setSelectedNodes([...new Set(selectedNodes.concat(nodeIds))]);
+      setSelectedNodes(Array.from(new Set(selectedNodes.concat(nodeIds))));
     } else {
       setSelectedNodes(selectedNodes.filter(node => !nodeIds.includes(node)));
     }
