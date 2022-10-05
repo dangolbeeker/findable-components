@@ -1,12 +1,35 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Button, Checkbox } from '@mantine/core';
-import { IconFolder } from '@tabler/icons';
-
+import { Box, Button, ButtonProps, Checkbox } from '@mantine/core';
+import { AiFillFolder, AiFillFolderOpen } from 'react-icons/ai';
 import { useTreeView } from './context';
 import { Category } from './types';
 
-const defaultColor = '#696F8C';
-const emptyColor = ' #8F95B2';
+interface FolderFileButtonProps
+  extends React.ComponentPropsWithoutRef<'button'> {
+  leftIcon: ButtonProps['leftIcon'];
+}
+
+export const FolderFileButton = ({
+  children,
+  ...props
+}: FolderFileButtonProps) => (
+  <Button
+    size="xs"
+    sx={{
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'flex-start',
+      color: '#696F8C',
+      background: 'white',
+      ':hover': {
+        background: '#eef2ff',
+      },
+    }}
+    {...props}
+  >
+    {children}
+  </Button>
+);
 
 export const Branch = ({
   count,
@@ -52,32 +75,40 @@ export const Branch = ({
     branchName = `${name} (${count})`;
 
   return (
-    <Box>
+    <Box sx={{ padding: 0 }}>
       <Box
         sx={{
           display: 'flex',
           alignItems: 'center',
           position: 'sticky',
           background: 'white',
+          width: '100%',
           zIndex: 1,
           top: 0,
         }}
       >
         {selectMode && (
-          <Box sx={{ margin: 0, marginRight: 8 }}>
-            <Checkbox checked={checked} onChange={handleCheckos} />
-          </Box>
+          <Checkbox
+            checked={checked}
+            onChange={handleCheckos}
+            size="xs"
+            sx={{ paddingLeft: 10 }}
+          />
         )}
-        <Button
+        <FolderFileButton
           leftIcon={
             !selectMode ? (
-              <IconFolder color={count > 0 ? defaultColor : emptyColor} />
+              !expanded ? (
+                <AiFillFolder />
+              ) : (
+                <AiFillFolderOpen />
+              )
             ) : null
           }
           onClick={() => setExpanded(!expanded)}
         >
           {branchName}
-        </Button>
+        </FolderFileButton>
       </Box>
       {expanded && <Box>{children({ overCheck: checked })}</Box>}
     </Box>

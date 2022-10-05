@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Box, Card } from '@mantine/core';
+import { Box } from '@mantine/core';
 
 import { Leaf, Leafs } from './Leafs';
 import { Branch } from './Branch';
@@ -33,7 +33,14 @@ export const Tree = ({
         }
 
         return (
-          <Card key={code + name} withBorder={Boolean(border)}>
+          <Box
+            key={code + name}
+            sx={{
+              border: border,
+              borderRadius: 4,
+              padding: 2,
+            }}
+          >
             <Branch
               count={count}
               name={name}
@@ -51,7 +58,7 @@ export const Tree = ({
                 </Box>
               )}
             </Branch>
-          </Card>
+          </Box>
         );
       })}
     </Fragment>

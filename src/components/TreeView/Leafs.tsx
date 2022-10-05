@@ -1,15 +1,16 @@
 import React, { memo } from 'react';
-import { Box, Checkbox, Button } from '@mantine/core';
+import { Box, Checkbox } from '@mantine/core';
 import {
   FixedSizeList as List,
   areEqual,
   ListChildComponentProps,
 } from 'react-window';
 import memoize from 'memoize-one';
-import { IconFolder } from '@tabler/icons';
+import { AiOutlineFile } from 'react-icons/ai';
 
 import { useTreeView } from './context';
 import { Category } from './types';
+import { FolderFileButton } from './Branch';
 
 export const Leaf = ({
   code,
@@ -38,25 +39,16 @@ export const Leaf = ({
           <Checkbox
             checked={!!selectedNodes.find(node => node === code)}
             onChange={() => handleSelectNodeChange(code)}
-            sx={{
-              margin: 0,
-              marginRight: 8,
-            }}
+            size="xs"
+            sx={{ paddingLeft: 10 }}
           />
         )}
-        <Button
-          sx={{
-            width: '100%',
-            display: 'flex',
-            justifyContent: 'flex-start',
-          }}
-          leftIcon={!selectMode ? <IconFolder /> : null}
-          onClick={() => {
-            handleSelectLeaf(code);
-          }}
+        <FolderFileButton
+          leftIcon={!selectMode ? <AiOutlineFile /> : null}
+          onClick={() => handleSelectLeaf(code)}
         >
           {name}
-        </Button>
+        </FolderFileButton>
       </Box>
     </Box>
   );
@@ -83,7 +75,7 @@ export const Leafs = ({ leafs }: { leafs: Category[] }) => (
       height={500}
       itemCount={leafs.length}
       itemData={createItemData(leafs)}
-      itemSize={24}
+      itemSize={35}
       width="100%"
     >
       {Row}

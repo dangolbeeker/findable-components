@@ -15,7 +15,17 @@ export const testdata: Category[] = [
         name: 'Johnnytester',
         children: testfiles,
       },
-      { code: '1337', name: 'test', isFile: true, children: [] },
+    ],
+  },
+  {
+    code: '12',
+    name: 'test',
+    children: [
+      {
+        code: '111',
+        name: 'Johnnytester',
+        children: [],
+      },
     ],
   },
 ];
