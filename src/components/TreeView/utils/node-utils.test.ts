@@ -3,7 +3,7 @@ import { countFiles, checkIfFolders, getFiles } from './index';
 
 test('Can count files', () => {
   const count = countFiles(testdata);
-  expect(count).toBe(4);
+  expect(count).toBe(3);
 
   const nullCount = countFiles(null as any);
   expect(nullCount).toBe(0);
@@ -45,7 +45,9 @@ test('Can check if children are folders', () => {
 
 test('Can get files', () => {
   const files = getFiles(testdata);
-  expect(files).toEqual(['123', '345', '456', '1337']);
+
+  console.log({ files });
+  expect(files).toEqual(['123', '345', '456']);
 
   const nullGet = getFiles(null as any);
   expect(nullGet).toEqual([]);

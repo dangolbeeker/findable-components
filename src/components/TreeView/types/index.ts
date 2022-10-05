@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 export type Category = {
   code: string;
   name: string;
-  children: Category[];
+  children?: Category[];
   isFile?: boolean;
 };
 

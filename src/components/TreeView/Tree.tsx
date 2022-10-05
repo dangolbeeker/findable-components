@@ -39,6 +39,13 @@ export const Tree = ({
               border: border,
               borderRadius: 4,
               padding: 2,
+              paddingTop: 0,
+              background: 'white',
+              ':first-child': {
+                maxHeight: 500,
+                overflowY: 'auto',
+                overflowX: 'hidden',
+              },
             }}
           >
             <Branch
@@ -50,11 +57,12 @@ export const Tree = ({
             >
               {({ overCheck }) => (
                 <Box sx={{ marginLeft: 24 }}>
-                  {childrenAreFolders || children.length < 20 ? (
-                    <Tree branches={children} overCheck={overCheck} />
-                  ) : (
-                    <Leafs leafs={children} />
-                  )}
+                  {children &&
+                    (childrenAreFolders || children.length < 20 ? (
+                      <Tree branches={children} overCheck={overCheck} />
+                    ) : (
+                      <Leafs leafs={children} />
+                    ))}
                 </Box>
               )}
             </Branch>

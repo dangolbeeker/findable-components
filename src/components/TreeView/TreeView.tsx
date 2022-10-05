@@ -5,7 +5,6 @@ import { Tree } from './Tree';
 import { TreeViewProps } from './types';
 
 export const TreeView = ({ data, ...props }: TreeViewProps) => {
-  console.log({ data });
   return (
     <TreeViewContextProvider {...props}>
       <TreeViewContext.Consumer>
@@ -17,13 +16,6 @@ export const TreeView = ({ data, ...props }: TreeViewProps) => {
               { minWidth: 755, cols: 2, spacing: 'sm' },
               { minWidth: 1440, cols: 3, spacing: 'md' },
             ]}
-            sx={{
-              ':first-of-type': {
-                maxHeight: 500,
-                overflowY: 'auto',
-                overflowX: 'hidden',
-              },
-            }}
           >
             <Tree branches={data} border="1px solid #D8DAE5" />
           </SimpleGrid>

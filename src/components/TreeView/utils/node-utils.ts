@@ -27,8 +27,8 @@ export const countFiles = (
  * @param nodes - The children nodes
  * @returns true if unable to find node with isFile = true
  */
-export function checkIfFolders(nodes: Category[]): boolean {
-  if (!isArray(nodes)) return false;
+export function checkIfFolders(nodes?: Category[]): boolean {
+  if (!nodes || !isArray(nodes)) return false;
   return Boolean(nodes?.find(node => !node.isFile));
 }
 
@@ -37,7 +37,7 @@ export function checkIfFolders(nodes: Category[]): boolean {
  * @param nodes - The children nodes
  * @returns flat array with all file codes
  */
-export const getFiles = (nodes: Category[]): Category['code'][] => {
+export const getFiles = (nodes?: Category[]): Category['code'][] => {
   if (!nodes || !isArray(nodes) || isEmptyArray(nodes)) return [];
 
   return nodes.flatMap(node =>
