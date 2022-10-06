@@ -21,7 +21,6 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "release": "np",
     "test": "tsdx test",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
