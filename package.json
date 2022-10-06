@@ -6,7 +6,12 @@
   "keywords": [
     "findable",
     "components",
-    "react"
+    "react",
+    "treeview",
+    "react-window",
+    "virtualization",
+    "optimized",
+    "folders"
   ],
   "license": "MIT",
   "main": "dist/index.js",
