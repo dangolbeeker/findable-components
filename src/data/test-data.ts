@@ -1,11 +1,9 @@
-import { Category } from './types';
-
 export const testfiles = [
   { code: '123', name: 'johnnytester', isFile: true, children: [] },
   { code: '345', name: 'johnnytest', isFile: true, children: [] },
   { code: '456', name: 'testjohnny', isFile: true, children: [] },
 ];
-export const testdata: Category[] = [
+export const testdata = [
   {
     code: '11',
     name: 'test',

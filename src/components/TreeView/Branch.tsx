@@ -5,6 +5,7 @@ import {
   AiFillFolderOpen,
   AiOutlineFolder,
 } from 'react-icons/ai';
+
 import { useTreeView } from './context';
 import { Category } from './types';
 

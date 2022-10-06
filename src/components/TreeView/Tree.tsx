@@ -3,7 +3,7 @@ import { Box } from '@mantine/core';
 
 import { Leaf, Leafs } from './Leafs';
 import { Branch } from './Branch';
-import { checkIfFolders, countFiles, getFiles } from './utils';
+import { checkIfFolders, countFiles, getFiles } from '../../utils';
 import { useTreeView } from './context';
 import { Category } from './types';
 

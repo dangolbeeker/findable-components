@@ -1,8 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { testfiles, testdata } from './test-data';
-
+import { testfiles, testdata } from '../../data';
 import { TreeView, Branch, Leaf, Leafs } from './index';
 import { Category, TreeViewProps } from './types';
 

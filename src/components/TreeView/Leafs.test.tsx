@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+
+import { testfiles } from '../../data';
 import { Leafs } from './Leafs';
-import { testfiles } from './test-data';
 
 describe('Leafs Component', () => {
   render(<Leafs leafs={testfiles} />);

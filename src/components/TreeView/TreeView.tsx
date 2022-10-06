@@ -1,5 +1,6 @@
 import React from 'react';
 import { SimpleGrid } from '@mantine/core';
+
 import { TreeViewContext, TreeViewContextProvider } from './context';
 import { Tree } from './Tree';
 import { TreeViewProps } from './types';

@@ -9,8 +9,8 @@ import memoize from 'memoize-one';
 import { AiOutlineFile } from 'react-icons/ai';
 
 import { useTreeView } from './context';
-import { Category } from './types';
 import { FolderFileButton } from './Branch';
+import { Category } from './types';
 
 export const Leaf = ({
   code,
