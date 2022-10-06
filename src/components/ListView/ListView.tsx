@@ -34,8 +34,6 @@ export const ListView = ({
     []
   );
 
-  console.log({ documents });
-
   const [rowData, setRowData] = useState<any[]>();
   const [columnDefs] = useState<ColDef[]>([
     {

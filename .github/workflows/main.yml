@@ -1,4 +1,5 @@
 name: CI
+run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
 on: [push]
 jobs:
   build:
@@ -7,8 +8,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node: ['14.x', '16.x', '18.x']
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+        node: ['16.x']
+        os: [ubuntu-latest, macOS-latest]
 
     steps:
       - name: Checkout repo
@@ -21,6 +22,9 @@ jobs:
 
       - name: Install deps and build (with cache)
         uses: bahmutov/npm-install@v1
+          with:
+            useLockFile: false
+            install-command: yarn install
 
       - name: Lint
         run: yarn lint
