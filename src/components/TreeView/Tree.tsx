@@ -38,8 +38,6 @@ export const Tree = ({
             sx={{
               border: border,
               borderRadius: 4,
-              padding: 2,
-              paddingTop: 0,
               background: 'white',
               ':first-child': {
                 maxHeight: 500,

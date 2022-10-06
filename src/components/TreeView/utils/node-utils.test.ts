@@ -46,7 +46,6 @@ test('Can check if children are folders', () => {
 test('Can get files', () => {
   const files = getFiles(testdata);
 
-  console.log({ files });
   expect(files).toEqual(['123', '345', '456']);
 
   const nullGet = getFiles(null as any);

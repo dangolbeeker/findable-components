@@ -1,6 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { Box, Button, ButtonProps, Checkbox } from '@mantine/core';
-import { AiFillFolder, AiFillFolderOpen } from 'react-icons/ai';
+import {
+  AiFillFolder,
+  AiFillFolderOpen,
+  AiOutlineFolder,
+} from 'react-icons/ai';
 import { useTreeView } from './context';
 import { Category } from './types';
 
@@ -19,10 +23,10 @@ export const FolderFileButton = ({
       width: '100%',
       display: 'flex',
       justifyContent: 'flex-start',
-      color: '#696F8C',
-      background: 'white',
+      color: '#474D66',
+      background: '#FFFFFF',
       ':hover': {
-        background: '#eef2ff',
+        background: '#F9FAFC',
       },
     }}
     {...props}
@@ -30,6 +34,18 @@ export const FolderFileButton = ({
     {children}
   </Button>
 );
+
+const getFolderIcon = (
+  selectMode?: boolean,
+  expanded?: boolean,
+  noFiles?: boolean
+) => {
+  if (selectMode) return <Fragment />;
+  if (noFiles) return <AiOutlineFolder />;
+  if (expanded) return <AiFillFolderOpen />;
+
+  return <AiFillFolder />;
+};
 
 export const Branch = ({
   count,
@@ -71,11 +87,14 @@ export const Branch = ({
   }, [overCheck]);
 
   let branchName = `${code} · ${name} (${count})`;
-  if (['+', '-', 'custom'].includes(code) || code.startsWith('FND'))
+  const noFiles = !Boolean(allFiles.length);
+
+  if (['+', '-', 'custom'].includes(code) || code.startsWith('FND')) {
     branchName = `${name} (${count})`;
+  }
 
   return (
-    <Box sx={{ padding: 0 }}>
+    <Box>
       <Box
         sx={{
           display: 'flex',
@@ -83,6 +102,7 @@ export const Branch = ({
           position: 'sticky',
           background: 'white',
           width: '100%',
+          borderRadius: 4,
           zIndex: 1,
           top: 0,
         }}
@@ -96,15 +116,7 @@ export const Branch = ({
           />
         )}
         <FolderFileButton
-          leftIcon={
-            !selectMode ? (
-              !expanded ? (
-                <AiFillFolder />
-              ) : (
-                <AiFillFolderOpen />
-              )
-            ) : null
-          }
+          leftIcon={getFolderIcon(selectMode, expanded, noFiles)}
           onClick={() => setExpanded(!expanded)}
         >
           {branchName}
