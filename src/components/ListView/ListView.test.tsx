@@ -1,12 +1,12 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import { DocumentListAG } from '.';
-import testdata from './dummyDocData.json';
+import { ListView } from './';
+import { testdata } from '../../data';
 
 describe('Tree Component', () => {
   render(
-    <DocumentListAG
+    <ListView
       documents={testdata as any}
       handleSelection={function(docIds: string[]): void {
         console.log({ docIds });
@@ -20,6 +20,6 @@ describe('Tree Component', () => {
   const list = screen.getAllByRole('checkbox');
 
   test('List rendering', () => {
-    expect(list).toHaveLength(6);
+    expect(list).toHaveLength(5);
   });
 });

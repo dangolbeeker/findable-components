@@ -22,7 +22,7 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "release": "np",
-    "test": "tsdx test --passWithNoTests",
+    "test": "tsdx test",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
@@ -33,6 +33,12 @@
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
+    }
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
     }
   },
   "prettier": {
@@ -81,6 +87,7 @@
     "@types/react-window": "^1.8.5",
     "babel-loader": "^8.2.5",
     "husky": "^8.0.1",
+    "identity-obj-proxy": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
