@@ -1,0 +1,695 @@
+[
+  {
+    "id": "dbde1ff3-9462-4864-86fd-86660221b860",
+    "s3Key": "36c62d90-480d-4232-b4af-dc00d43347e0/e28cd5e7-82ef-4413-bebc-c02968158046/433 FDVdok1511733.pdf",
+    "filename": "433 FDVdok1511733.pdf",
+    "hashTextContent": "50bb9d2ddadb10bf51a55dfa500a80e1",
+    "lengthTextContent": 1172,
+    "buildingOrderIndex": null,
+    "suggestions": null,
+    "suggestionsMethod2": [
+      {
+        "label": "410",
+        "score": "97.83"
+      },
+      {
+        "label": "433",
+        "score": "1.28"
+      },
+      {
+        "label": "411",
+        "score": "0.29"
+      }
+    ],
+    "requestedReviews": {
+      "items": []
+    },
+    "size": 4869200,
+    "buildingCategory": "433",
+    "fileArchiveCategory": null,
+    "asBuilt": false,
+    "outdated": false,
+    "corrupt": null,
+    "multipleDocuments": false,
+    "serialNumber": null,
+    "buildingId": "e28cd5e7-82ef-4413-bebc-c02968158046",
+    "updatedBy": "linnkri91@gmail.com",
+    "createdAt": "2021-09-13T10:48:19.211Z",
+    "updatedAt": "2021-09-29T19:29:31.494Z",
+    "owner": "___xamznone____",
+    "group": "testkunde"
+  },
+  {
+    "id": "dd87e3b3-4894-488f-8a91-5cd25a05ab1d",
+    "s3Key": "36c62d90-480d-4232-b4af-dc00d43347e0/e28cd5e7-82ef-4413-bebc-c02968158046/433 IR 180 UP.pdf",
+    "filename": "433 IR 180 UP.pdf",
+    "hashTextContent": "dfa5222cb3797eb9354b7fccf3f36221",
+    "lengthTextContent": 1495,
+    "buildingOrderIndex": null,
+    "suggestions": null,
+    "suggestionsMethod2": [
+      {
+        "label": "255",
+        "score": "32.04"
+      },
+      {
+        "label": "000",
+        "score": "18.45"
+      },
+      {
+        "label": "246",
+        "score": "15.80"
+      }
+    ],
+    "requestedReviews": {
+      "items": []
+    },
+    "size": 99404,
+    "buildingCategory": "433",
+    "fileArchiveCategory": null,
+    "asBuilt": false,
+    "outdated": false,
+    "corrupt": null,
+    "multipleDocuments": false,
+    "serialNumber": null,
+    "buildingId": "e28cd5e7-82ef-4413-bebc-c02968158046",
+    "updatedBy": "linnkri91@gmail.com",
+    "createdAt": "2021-09-13T10:48:19.211Z",
+    "updatedAt": "2021-09-29T19:30:14.767Z",
+    "owner": "___xamznone____",
+    "group": "testkunde"
+  },
+  {
+    "id": "bc31235c-e292-45ed-8a2b-d09271bf0c26",
+    "s3Key": "36c62d90-480d-4232-b4af-dc00d43347e0/e28cd5e7-82ef-4413-bebc-c02968158046/261 fdv-glava-bastion-undertak.pdf",
+    "filename": "261 fdv-glava-bastion-undertak.pdf",
+    "hashTextContent": "76afcf43f0552f3bb62e35ced3df0de7",
+    "lengthTextContent": 1737,
+    "buildingOrderIndex": null,
+    "suggestions": null,
+    "suggestionsMethod2": [
+      {
+        "label": "000",
+        "score": "99.92"
+      },
+      {
+        "label": "234",
+        "score": "0.02"
+      },
+      {
+        "label": "200",
+        "score": "0.01"
+      }
+    ],
+    "requestedReviews": {
+      "items": []
+    },
+    "size": 110549,
+    "buildingCategory": "261",
+    "fileArchiveCategory": null,
+    "asBuilt": false,
+    "outdated": false,
+    "corrupt": null,
+    "multipleDocuments": false,
+    "serialNumber": null,
+    "buildingId": "e28cd5e7-82ef-4413-bebc-c02968158046",
+    "updatedBy": "linnkri91@gmail.com",
+    "createdAt": "2021-09-13T10:48:19.210Z",
+    "updatedAt": "2021-09-29T19:29:28.540Z",
+    "owner": "___xamznone____",
+    "group": "testkunde"
+  },
+  {
+    "id": "75c858df-4519-4afb-9021-cb6fc21301f3",
+    "s3Key": "36c62d90-480d-4232-b4af-dc00d43347e0/e28cd5e7-82ef-4413-bebc-c02968158046/244 Malte+ytterdører+B30_EI30_Rw40db.pdf",
+    "filename": "244 Malte+ytterdører+B30_EI30_Rw40db.pdf",
+    "hashTextContent": "05e94655404dd3919d9127b898756b6d",
+    "lengthTextContent": 2576,
+    "buildingOrderIndex": null,
+    "suggestions": null,
+    "suggestionsMethod2": [
+      {
+        "label": "244",
+        "score": "63.13"
+      },
+      {
+        "label": "234",
+        "score": "36.32"
+      },
+      {
+        "label": "290",
+        "score": "0.21"
+      }
+    ],
+    "requestedReviews": {
+      "items": []
+    },
+    "size": 502927,
+    "buildingCategory": "244",
+    "fileArchiveCategory": null,
+    "asBuilt": false,
+    "outdated": false,
+    "corrupt": null,
+    "multipleDocuments": false,
+    "serialNumber": null,
+    "buildingId": "e28cd5e7-82ef-4413-bebc-c02968158046",
+    "updatedBy": "linnkri91@gmail.com",
+    "createdAt": "2021-09-13T10:48:19.210Z",
+    "updatedAt": "2021-09-29T19:30:07.650Z",
+    "owner": "___xamznone____",
+    "group": "testkunde"
+  },
+  {
+    "id": "45b63b63-18dd-4d0e-a624-7f121ad3274a",
+    "s3Key": "36c62d90-480d-4232-b4af-dc00d43347e0/e28cd5e7-82ef-4413-bebc-c02968158046/315 FDV 11107.pdf",
+    "filename": "315 FDV 11107.pdf",
+    "hashTextContent": "34cdb6c6197b217b06d84feeeee22ebf",
+    "lengthTextContent": 863,
+    "buildingOrderIndex": null,
+    "suggestions": null,
+    "suggestionsMethod2": [
+      {
+        "label": "315",
+        "score": "99.77"
+      },
+      {
+        "label": "314",
+        "score": "0.07"
+      },
+      {
+        "label": "300",
+        "score": "0.06"
+      }
+    ],
+    "requestedReviews": {
+      "items": []
+    },
+    "size": 80138,
+    "buildingCategory": "315",
+    "fileArchiveCategory": null,
+    "asBuilt": false,
+    "outdated": false,
+    "corrupt": null,
+    "multipleDocuments": false,
+    "serialNumber": null,
+    "buildingId": "e28cd5e7-82ef-4413-bebc-c02968158046",
+    "updatedBy": "linnkri91@gmail.com",
+    "createdAt": "2021-09-13T10:48:19.211Z",
+    "updatedAt": "2021-09-29T19:29:34.352Z",
+    "owner": "___xamznone____",
+    "group": "testkunde"
+  },
+  {
+    "id": "608e4b74-3cd4-48e1-b488-eb20a98bb074",
+    "s3Key": "36c62d90-480d-4232-b4af-dc00d43347e0/e28cd5e7-82ef-4413-bebc-c02968158046/315 FDV PILI gulvsluk.pdf",
+    "filename": "315 FDV PILI gulvsluk.pdf",
+    "hashTextContent": "83fa7dfc9699b264dbd30a39af714ef5",
+    "lengthTextContent": 2070,
+    "buildingOrderIndex": null,
+    "suggestions": null,
+    "suggestionsMethod2": [
+      {
+        "label": "315",
+        "score": "99.48"
+      },
+      {
+        "label": "255",
+        "score": "0.09"
+      },
+      {
+        "label": "000",
+        "score": "0.07"
+      }
+    ],
+    "requestedReviews": {
+      "items": []
+    },
+    "size": 212767,
+    "buildingCategory": "315",
+    "fileArchiveCategory": null,
+    "asBuilt": false,
+    "outdated": false,
+    "corrupt": null,
+    "multipleDocuments": false,
+    "serialNumber": null,
+    "buildingId": "e28cd5e7-82ef-4413-bebc-c02968158046",
+    "updatedBy": "linnkri91@gmail.com",
+    "createdAt": "2021-09-13T10:48:19.211Z",
+    "updatedAt": "2021-09-29T19:29:38.526Z",
+    "owner": "___xamznone____",
+    "group": "testkunde"
+  },
+  {
+    "id": "a13a3404-55e7-43de-8285-009250581ca0",
+    "s3Key": "36c62d90-480d-4232-b4af-dc00d43347e0/e28cd5e7-82ef-4413-bebc-c02968158046/244 Användningsinstr- kipp-dreh.pdf",
+    "filename": "244 Användningsinstr- kipp-dreh.pdf",
+    "hashTextContent": "3dfb8b29c824b7f63db6dc8d17304886",
+    "lengthTextContent": 592,
+    "buildingOrderIndex": null,
+    "suggestions": null,
+    "suggestionsMethod2": [
+      {
+        "label": "332",
+        "score": "56.08"
+      },
+      {
+        "label": "621",
+        "score": "23.39"
+      },
+      {
+        "label": "244",
+        "score": "8.74"
+      }
+    ],
+    "requestedReviews": {
+      "items": []
+    },
+    "size": 104957,
+    "buildingCategory": "244",
+    "fileArchiveCategory": null,
+    "asBuilt": false,
+    "outdated": false,
+    "corrupt": null,
+    "multipleDocuments": false,
+    "serialNumber": null,
+    "buildingId": "e28cd5e7-82ef-4413-bebc-c02968158046",
+    "updatedBy": "linnkri91@gmail.com",
+    "createdAt": "2021-09-13T10:48:19.210Z",
+    "updatedAt": "2021-09-29T19:50:00.327Z",
+    "owner": "___xamznone____",
+    "group": "testkunde"
+  },
+  {
+    "id": "a53f6a97-b704-4e43-936c-38d89e2dd36c",
+    "s3Key": "36c62d90-480d-4232-b4af-dc00d43347e0/e28cd5e7-82ef-4413-bebc-c02968158046/315 6165836_FDV.pdf",
+    "filename": "315 6165836_FDV.pdf",
+    "hashTextContent": "da9c8d1872a21bc47b91ffc52a6988e6",
+    "lengthTextContent": 1547,
+    "buildingOrderIndex": null,
+    "suggestions": null,
+    "suggestionsMethod2": [
+      {
+        "label": "000",
+        "score": "74.87"
+      },
+      {
+        "label": "255",
+        "score": "11.14"
+      },
+      {
+        "label": "315",
+        "score": "3.58"
+      }
+    ],
+    "requestedReviews": {
+      "items": []
+    },
+    "size": 65272,
+    "buildingCategory": "315",
+    "fileArchiveCategory": null,
+    "asBuilt": false,
+    "outdated": false,
+    "corrupt": null,
+    "multipleDocuments": false,
+    "serialNumber": null,
+    "buildingId": "e28cd5e7-82ef-4413-bebc-c02968158046",
+    "updatedBy": "linnkri91@gmail.com",
+    "createdAt": "2021-09-13T10:48:19.211Z",
+    "updatedAt": "2021-09-29T18:32:50.722Z",
+    "owner": "___xamznone____",
+    "group": "testkunde"
+  },
+  {
+    "id": "21ab6a46-5c60-4c28-b38c-eb4ddecc222d",
+    "s3Key": "36c62d90-480d-4232-b4af-dc00d43347e0/e28cd5e7-82ef-4413-bebc-c02968158046/244 000510(1.0)_EPD-ND NTech Fixed frame_Timber_105.pdf",
+    "filename": "244 000510(1.0)_EPD-ND NTech Fixed frame_Timber_105.pdf",
+    "hashTextContent": "a6274414006057fd8b551ced24cdea71",
+    "lengthTextContent": 17326,
+    "buildingOrderIndex": null,
+    "suggestions": null,
+    "suggestionsMethod2": [
+      {
+        "label": "248",
+        "score": "69.43"
+      },
+      {
+        "label": "000",
+        "score": "6.56"
+      },
+      {
+        "label": "350",
+        "score": "4.55"
+      }
+    ],
+    "requestedReviews": {
+      "items": []
+    },
+    "size": 2499012,
+    "buildingCategory": "244",
+    "fileArchiveCategory": null,
+    "asBuilt": false,
+    "outdated": false,
+    "corrupt": null,
+    "multipleDocuments": false,
+    "serialNumber": null,
+    "buildingId": "e28cd5e7-82ef-4413-bebc-c02968158046",
+    "updatedBy": "linnkri91@gmail.com",
+    "createdAt": "2021-09-13T10:48:19.210Z",
+    "updatedAt": "2021-09-29T19:30:01.642Z",
+    "owner": "___xamznone____",
+    "group": "testkunde"
+  },
+  {
+    "id": "f5a4466f-5ab3-41eb-ba8c-7e53b387285b",
+    "s3Key": "36c62d90-480d-4232-b4af-dc00d43347e0/e28cd5e7-82ef-4413-bebc-c02968158046/284 opus-glassrekkverk.806132.1.pdf",
+    "filename": "284 opus-glassrekkverk.806132.1.pdf",
+    "hashTextContent": "20f8f536a7622b2e6ed76ecbb0af5ba4",
+    "lengthTextContent": 5019,
+    "buildingOrderIndex": null,
+    "suggestions": null,
+    "suggestionsMethod2": [
+      {
+        "label": "542",
+        "score": "46.06"
+      },
+      {
+        "label": "000",
+        "score": "21.23"
+      },
+      {
+        "label": "621",
+        "score": "17.21"
+      }
+    ],
+    "requestedReviews": {
+      "items": []
+    },
+    "size": 2677984,
+    "buildingCategory": "284",
+    "fileArchiveCategory": null,
+    "asBuilt": false,
+    "outdated": false,
+    "corrupt": null,
+    "multipleDocuments": false,
+    "serialNumber": null,
+    "buildingId": "e28cd5e7-82ef-4413-bebc-c02968158046",
+    "updatedBy": "linnkri91@gmail.com",
+    "createdAt": "2021-09-13T10:48:19.211Z",
+    "updatedAt": "2021-09-29T18:32:55.426Z",
+    "owner": "___xamznone____",
+    "group": "testkunde"
+  },
+  {
+    "id": "b3481858-eee0-47bf-a95e-b4e4b25149b4",
+    "s3Key": "36c62d90-480d-4232-b4af-dc00d43347e0/e28cd5e7-82ef-4413-bebc-c02968158046/312 FDV+Mapress+kobber_20120912_120749.pdf",
+    "filename": "312 FDV+Mapress+kobber_20120912_120749.pdf",
+    "hashTextContent": "d50a6bfea4ef9631f9a96fc3c051979e",
+    "lengthTextContent": 2193,
+    "buildingOrderIndex": null,
+    "suggestions": null,
+    "suggestionsMethod2": [
+      {
+        "label": "000",
+        "score": "97.59"
+      },
+      {
+        "label": "300",
+        "score": "0.82"
+      },
+      {
+        "label": "411",
+        "score": "0.37"
+      }
+    ],
+    "requestedReviews": {
+      "items": []
+    },
+    "size": 62930,
+    "buildingCategory": "312",
+    "fileArchiveCategory": null,
+    "asBuilt": false,
+    "outdated": false,
+    "corrupt": null,
+    "multipleDocuments": false,
+    "serialNumber": null,
+    "buildingId": "e28cd5e7-82ef-4413-bebc-c02968158046",
+    "updatedBy": "linnkri91@gmail.com",
+    "createdAt": "2021-09-13T10:48:19.211Z",
+    "updatedAt": "2021-09-29T18:32:59.869Z",
+    "owner": "___xamznone____",
+    "group": "testkunde"
+  },
+  {
+    "id": "9c40aeef-e721-4a3b-a411-37b2be3d9ef8",
+    "s3Key": "36c62d90-480d-4232-b4af-dc00d43347e0/e28cd5e7-82ef-4413-bebc-c02968158046/315 FDV-L-sluk-3649.pdf",
+    "filename": "315 FDV-L-sluk-3649.pdf",
+    "hashTextContent": "6f6497da45cc178a5b9c59e2b4a675fa",
+    "lengthTextContent": 3847,
+    "buildingOrderIndex": null,
+    "suggestions": null,
+    "suggestionsMethod2": [
+      {
+        "label": "315",
+        "score": "96.99"
+      },
+      {
+        "label": "300",
+        "score": "2.69"
+      },
+      {
+        "label": "314",
+        "score": "0.07"
+      }
+    ],
+    "requestedReviews": {
+      "items": []
+    },
+    "size": 179190,
+    "buildingCategory": "315",
+    "fileArchiveCategory": null,
+    "asBuilt": false,
+    "outdated": false,
+    "corrupt": null,
+    "multipleDocuments": false,
+    "serialNumber": null,
+    "buildingId": "e28cd5e7-82ef-4413-bebc-c02968158046",
+    "updatedBy": "linnkri91@gmail.com",
+    "createdAt": "2021-09-13T10:48:19.211Z",
+    "updatedAt": "2021-09-29T18:33:05.269Z",
+    "owner": "___xamznone____",
+    "group": "testkunde"
+  },
+  {
+    "id": "0ccf1592-dbda-4b29-955e-ad4342a20903",
+    "s3Key": "36c62d90-480d-4232-b4af-dc00d43347e0/e28cd5e7-82ef-4413-bebc-c02968158046/433 FDVdok1410221.pdf",
+    "filename": "433 FDVdok1410221.pdf",
+    "hashTextContent": "3761c07277024e9c6bb9b124499322cc",
+    "lengthTextContent": 1021,
+    "buildingOrderIndex": null,
+    "suggestions": [
+      {
+        "label": "410",
+        "score": "44.64056608254446"
+      },
+      {
+        "label": "521",
+        "score": "32.5337727305968"
+      },
+      {
+        "label": "433",
+        "score": "8.439233963235626"
+      }
+    ],
+    "suggestionsMethod2": [
+      {
+        "label": "410",
+        "score": "44.64"
+      },
+      {
+        "label": "521",
+        "score": "32.53"
+      },
+      {
+        "label": "433",
+        "score": "8.44"
+      }
+    ],
+    "requestedReviews": {
+      "items": []
+    },
+    "size": 6525851,
+    "buildingCategory": "433",
+    "fileArchiveCategory": null,
+    "asBuilt": false,
+    "outdated": false,
+    "corrupt": null,
+    "multipleDocuments": false,
+    "serialNumber": null,
+    "buildingId": "e28cd5e7-82ef-4413-bebc-c02968158046",
+    "updatedBy": "linnkri91@gmail.com",
+    "createdAt": "2021-09-13T10:48:19.211Z",
+    "updatedAt": "2021-09-29T18:33:17.146Z",
+    "owner": "___xamznone____",
+    "group": "testkunde"
+  },
+  {
+    "id": "b3d22a8c-d632-4065-915a-d4b83eaad46f",
+    "s3Key": "36c62d90-480d-4232-b4af-dc00d43347e0/e28cd5e7-82ef-4413-bebc-c02968158046/235 FDV-utvendig-kledning-grunnet.pdf",
+    "filename": "235 fdv-utvendig-kledning-grunnet.pdf",
+    "hashTextContent": "a3dbd0d95bccb998efe8cfc142996ceb",
+    "lengthTextContent": 3344,
+    "buildingOrderIndex": null,
+    "suggestions": null,
+    "suggestionsMethod2": [
+      {
+        "label": "235",
+        "score": "93.17"
+      },
+      {
+        "label": "257",
+        "score": "1.67"
+      },
+      {
+        "label": "773",
+        "score": "1.43"
+      }
+    ],
+    "requestedReviews": {
+      "items": []
+    },
+    "size": 76380,
+    "buildingCategory": "235",
+    "fileArchiveCategory": null,
+    "asBuilt": false,
+    "outdated": false,
+    "corrupt": null,
+    "multipleDocuments": false,
+    "serialNumber": null,
+    "buildingId": "e28cd5e7-82ef-4413-bebc-c02968158046",
+    "updatedBy": "linnkri91@gmail.com",
+    "createdAt": "2021-09-13T10:48:19.210Z",
+    "updatedAt": "2021-09-29T19:29:58.252Z",
+    "owner": "___xamznone____",
+    "group": "testkunde"
+  },
+  {
+    "id": "bad6bb4a-5f36-464f-811a-1694c3977325",
+    "s3Key": "36c62d90-480d-4232-b4af-dc00d43347e0/e28cd5e7-82ef-4413-bebc-c02968158046/433 52350-FDV-1.pdf",
+    "filename": "433 52350-FDV-1.pdf",
+    "hashTextContent": "dbf2e11222c419529878b34bd458762d",
+    "lengthTextContent": 478,
+    "buildingOrderIndex": null,
+    "suggestions": null,
+    "suggestionsMethod2": [
+      {
+        "label": "410",
+        "score": "87.57"
+      },
+      {
+        "label": "442",
+        "score": "2.81"
+      },
+      {
+        "label": "433",
+        "score": "2.25"
+      }
+    ],
+    "requestedReviews": {
+      "items": []
+    },
+    "size": 301282,
+    "buildingCategory": "433",
+    "fileArchiveCategory": null,
+    "asBuilt": false,
+    "outdated": false,
+    "corrupt": null,
+    "multipleDocuments": false,
+    "serialNumber": null,
+    "buildingId": "e28cd5e7-82ef-4413-bebc-c02968158046",
+    "updatedBy": "linnkri91@gmail.com",
+    "createdAt": "2021-09-13T10:48:19.211Z",
+    "updatedAt": "2021-09-29T19:29:24.664Z",
+    "owner": "___xamznone____",
+    "group": "testkunde"
+  },
+  {
+    "id": "943ec828-6525-4207-8e89-154139758ab9",
+    "s3Key": "36c62d90-480d-4232-b4af-dc00d43347e0/e28cd5e7-82ef-4413-bebc-c02968158046/244 Cleaning and Maintenance Guide for Facade Glazing AGC.pdf",
+    "filename": "244 Cleaning and Maintenance Guide for Facade Glazing AGC.pdf",
+    "hashTextContent": "77ffae3db83ac771494c71b6479c6816",
+    "lengthTextContent": 4950,
+    "buildingOrderIndex": null,
+    "suggestions": null,
+    "suggestionsMethod2": [
+      {
+        "label": "234",
+        "score": "67.64"
+      },
+      {
+        "label": "244",
+        "score": "25.80"
+      },
+      {
+        "label": "000",
+        "score": "2.49"
+      }
+    ],
+    "requestedReviews": {
+      "items": []
+    },
+    "size": 205959,
+    "buildingCategory": "244",
+    "fileArchiveCategory": null,
+    "asBuilt": false,
+    "outdated": false,
+    "corrupt": null,
+    "multipleDocuments": false,
+    "serialNumber": null,
+    "buildingId": "e28cd5e7-82ef-4413-bebc-c02968158046",
+    "updatedBy": "linnkri91@gmail.com",
+    "createdAt": "2021-09-13T10:48:19.210Z",
+    "updatedAt": "2021-09-29T19:29:53.236Z",
+    "owner": "___xamznone____",
+    "group": "testkunde"
+  },
+  {
+    "id": "bd419372-de8f-48fc-ac8b-3247bcee632b",
+    "s3Key": "36c62d90-480d-4232-b4af-dc00d43347e0/e28cd5e7-82ef-4413-bebc-c02968158046/244 SGG BIOCLEAN.pdf",
+    "filename": "244 SGG BIOCLEAN.pdf",
+    "hashTextContent": "584e7be559223111670037ebe26ba83d",
+    "lengthTextContent": 7902,
+    "buildingOrderIndex": null,
+    "suggestions": null,
+    "suggestionsMethod2": [
+      {
+        "label": "244",
+        "score": "48.57"
+      },
+      {
+        "label": "773",
+        "score": "11.60"
+      },
+      {
+        "label": "234",
+        "score": "8.72"
+      }
+    ],
+    "requestedReviews": {
+      "items": []
+    },
+    "size": 409132,
+    "buildingCategory": "244",
+    "fileArchiveCategory": null,
+    "asBuilt": false,
+    "outdated": false,
+    "corrupt": null,
+    "multipleDocuments": false,
+    "serialNumber": null,
+    "buildingId": "e28cd5e7-82ef-4413-bebc-c02968158046",
+    "updatedBy": "linnkri91@gmail.com",
+    "createdAt": "2021-09-13T10:48:19.210Z",
+    "updatedAt": "2021-09-29T19:29:41.740Z",
+    "owner": "___xamznone____",
+    "group": "testkunde"
+  }
+]
