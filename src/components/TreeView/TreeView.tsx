@@ -5,9 +5,22 @@ import { TreeViewContext, TreeViewContextProvider } from './context';
 import { Tree } from './Tree';
 import { TreeViewProps } from './types';
 
-export const TreeView = ({ data, ...props }: TreeViewProps) => {
+export const TreeView = ({
+  data,
+  expandAll,
+  showEmptyCats,
+  selectMode,
+  handleSelection,
+  onSelectDocument,
+}: TreeViewProps) => {
   return (
-    <TreeViewContextProvider {...props}>
+    <TreeViewContextProvider
+      expandAll={expandAll}
+      showEmptyCats={showEmptyCats}
+      selectMode={selectMode}
+      handleSelection={handleSelection}
+      onSelectDocument={onSelectDocument}
+    >
       <TreeViewContext.Consumer>
         {() => (
           <SimpleGrid

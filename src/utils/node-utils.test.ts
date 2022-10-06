@@ -1,4 +1,4 @@
-import { testdata } from '../test-data';
+import { testdata } from '../data';
 import { countFiles, checkIfFolders, getFiles } from './index';
 
 test('Can count files', () => {
