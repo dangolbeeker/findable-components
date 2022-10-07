@@ -30,6 +30,13 @@ export const TreeView = ({
               { minWidth: 755, cols: 2, spacing: 'sm' },
               { minWidth: 1440, cols: 3, spacing: 'md' },
             ]}
+            sx={{
+              '> div': {
+                maxHeight: 500,
+                overflowY: 'auto',
+                overflowX: 'hidden',
+              },
+            }}
           >
             <Tree branches={data} border="1px solid #D8DAE5" />
           </SimpleGrid>

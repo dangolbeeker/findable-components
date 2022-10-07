@@ -39,11 +39,6 @@ export const Tree = ({
               border: border,
               borderRadius: 4,
               background: 'white',
-              ':first-child': {
-                maxHeight: 500,
-                overflowY: 'auto',
-                overflowX: 'hidden',
-              },
             }}
           >
             <Branch
