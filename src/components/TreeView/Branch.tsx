@@ -7,6 +7,7 @@ import {
 } from 'react-icons/ai';
 
 import { useTreeView } from './context';
+import { COLORS } from '../../styles/colors';
 import { Category } from './types';
 
 interface FolderFileButtonProps
@@ -24,10 +25,10 @@ export const FolderFileButton = ({
       width: '100%',
       display: 'flex',
       justifyContent: 'flex-start',
-      color: '#474D66',
+      color: COLORS.folder,
       background: '#FFFFFF',
       ':hover': {
-        background: '#F9FAFC',
+        background: COLORS.hover,
       },
     }}
     {...props}

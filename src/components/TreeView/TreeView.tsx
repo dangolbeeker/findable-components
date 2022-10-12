@@ -3,6 +3,7 @@ import { SimpleGrid } from '@mantine/core';
 
 import { TreeViewContext, TreeViewContextProvider } from './context';
 import { Tree } from './Tree';
+import { COLORS, BREAKPOINTS } from '../../styles';
 import { TreeViewProps } from './types';
 
 export const TreeView = ({
@@ -27,8 +28,8 @@ export const TreeView = ({
             cols={1}
             spacing="md"
             breakpoints={[
-              { minWidth: 755, cols: 2, spacing: 'sm' },
-              { minWidth: 1440, cols: 3, spacing: 'md' },
+              { minWidth: BREAKPOINTS.tablet, cols: 2, spacing: 'sm' },
+              { minWidth: BREAKPOINTS.laptop, cols: 3, spacing: 'md' },
             ]}
             sx={{
               '> div': {
@@ -38,7 +39,7 @@ export const TreeView = ({
               },
             }}
           >
-            <Tree branches={data} border="1px solid #D8DAE5" />
+            <Tree branches={data} border={`1px solid ${COLORS.border}`} />
           </SimpleGrid>
         )}
       </TreeViewContext.Consumer>
