@@ -19,7 +19,7 @@ DocumentCardComponent.args = {
   filename: 'betjeningsenhet type pxm10-1.pdf',
   documentId: 'https://picsum.photos/200/300',
   highlight:
-    '...nödvändig anläggningsinformation val mellan generisk vy eller favoritvy för betjäning och övervakning av om varans kemiska sammansättning är annan efter inbyggnad än vid leverans, anges innehållet i den färdiga inbyggdavaran här. Om innehållet är oförändrat lämnas inga uppgifter i nedanstående tabell.',
+    'bygget ramme furu <em>døren</em> isolert polystyren aluminiumsplate fuktsperre innside ytterside hdf-plate begge',
   previewUrl: 'https://picsum.photos/190/130',
   buildingCategory: '119 · Declaration of conformity electrical',
   buildingOwner: 'Mikkels Malerservice A/S',

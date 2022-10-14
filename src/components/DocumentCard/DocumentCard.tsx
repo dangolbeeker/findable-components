@@ -103,9 +103,10 @@ export const DocumentCard = ({
               maxWidth: '80%',
             },
           }}
-        >
-          {highlight}
-        </Text>
+          dangerouslySetInnerHTML={{
+            __html: highlight ?? '',
+          }}
+        />
       </Box>
     </Card>
   );
