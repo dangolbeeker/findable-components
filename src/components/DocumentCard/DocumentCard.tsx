@@ -9,7 +9,7 @@ export interface DocumentCardPops {
   filename: string;
   documentId: string;
   previewUrl: string;
-  handleClick: (docId: string) => void;
+  handleCardAction: (docId: string) => void;
   highlight?: string | null;
   buildingCategory?: string;
   buildingOwner?: string;
@@ -20,7 +20,7 @@ export const DocumentCard = ({
   highlight,
   documentId,
   previewUrl,
-  handleClick,
+  handleCardAction,
   buildingCategory,
   buildingOwner,
 }: DocumentCardPops) => {
@@ -29,7 +29,7 @@ export const DocumentCard = ({
       withBorder
       tabIndex={1}
       sx={{ display: 'flex', overflow: 'unset', cursor: 'pointer' }}
-      onClick={() => handleClick(documentId)}
+      onClick={() => handleCardAction(documentId)}
     >
       <HoverCard position="right-start">
         <HoverCard.Target>
