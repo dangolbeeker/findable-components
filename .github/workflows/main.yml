@@ -51,9 +51,6 @@ jobs:
 
       - run: yarn
 
-      - name: preparing dist
-        run: yarn prepare
-
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
