@@ -1,1 +1,1 @@
-export { Dropzone, ErrorCode } from './Dropzone';
+export { Dropzone, ErrorCode, FileRejection } from './Dropzone';

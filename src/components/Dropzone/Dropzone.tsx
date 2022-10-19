@@ -1,5 +1,5 @@
-import React, { useCallback } from 'react';
-import { FileRejection, useDropzone } from 'react-dropzone';
+import React from 'react';
+import { FileRejection as FileRectionType, useDropzone } from 'react-dropzone';
 import { BsCloudUpload } from 'react-icons/bs';
 import { Box, Card, Group, Text } from '@mantine/core';
 
@@ -12,6 +12,8 @@ export enum ErrorCode {
   FileTooSmall = 'file-too-small',
   TooManyFiles = 'too-many-files',
 }
+
+export type FileRejection = FileRectionType;
 
 export interface DropzoneProps {
   heading: string;
@@ -26,19 +28,12 @@ export const Dropzone = ({
   handleAccepted,
   handleRejected,
 }: DropzoneProps) => {
-  const onDropAccepted = useCallback((acceptedFiles: File[]) => {
-    handleAccepted(acceptedFiles);
-  }, []);
-  const onDropRejected = useCallback((rejectedFiles: FileRejection[]) => {
-    handleRejected(rejectedFiles);
-  }, []);
-
   const { getRootProps, getInputProps } = useDropzone({
     maxFiles: MAX_FILES,
     maxSize: MAX_FILE_SIZE,
     accept: ACCEPTED_FILE_TYPES,
-    onDropAccepted,
-    onDropRejected,
+    onDropAccepted: (af: File[]) => handleAccepted(af),
+    onDropRejected: (rf: FileRejection[]) => handleRejected(rf),
   });
 
   return (
