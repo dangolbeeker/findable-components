@@ -2,20 +2,25 @@ import { gbToBytes } from '../../../utils';
 
 //https://react-dropzone.js.org/#section-accepting-specific-file-types
 export const ACCEPTED_FILE_TYPES = {
-  'image/*': ['.gif', '.jpeg', '.jpg', '.tiff', '.dwg'],
+  'image/*': ['.gif', '.jpeg', '.jpg', '.tiff'],
+  'image/x-dwg': ['.dwg'],
   'text/*': ['.plain'],
-  'application/*': [
-    '.zip',
-    '.x-zip-compressed',
-    '.x-7z-compressed',
-    '.x-rar',
-    '.pdf',
-    '.msword',
-    '.vnd.openxmlformats-officedocument.wordprocessingml.document',
-    '.vnd.ms-excel',
-    '.vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-    '.vnd.ms-powerpoint',
-    '.vnd.openxmlformats-officedocument.presentationml.presentation',
+  'application/zip': ['.zip'],
+  // 'application/x-zip-compressed': ['.x-zip-compressed'],
+  // 'application/x-7z-compressed': ['.x-7z-compressed'],
+  // 'application/x-rar': ['.x-rar'],
+  'application/pdf': ['.pdf'],
+  'application/msword': ['.doc'],
+  'application/vnd.openxmlformats-officedocument.wordprocessingml.document': [
+    '.docx',
+  ],
+  'application/vnd.ms-excel': ['.xls'],
+  'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': [
+    '.xlsx',
+  ],
+  'application/vnd.ms-powerpoint': ['.ppt'],
+  'application/vnd.openxmlformats-officedocument.presentationml.presentation': [
+    '.pptx',
   ],
 };
 

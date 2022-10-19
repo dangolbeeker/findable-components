@@ -1,17 +1,17 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { Dropzone } from './Dropzone';
+import { Dropzone, DropzoneProps } from './Dropzone';
 import { FileRejection } from 'react-dropzone';
 
 export default {
   title: 'Dropzone',
 } as Meta;
 
-const DropzoneTemplate = () => (
+const DropzoneTemplate = (props: DropzoneProps) => (
   <Dropzone
-    heading="johnnytesthohaho"
-    description="Johnnytester"
+    heading={props.heading}
+    description={props.description}
     handleAccepted={function(acceptedFiles: File[]): void {
       console.log({ acceptedFiles });
     }}
@@ -21,6 +21,12 @@ const DropzoneTemplate = () => (
   />
 );
 
-export const DropzoneComponent: Story<{}> = DropzoneTemplate.bind({});
+export const DropzoneComponent: Story<DropzoneProps> = DropzoneTemplate.bind(
+  {}
+);
 
-DropzoneComponent.args = {};
+DropzoneComponent.args = {
+  heading: 'Drag images here or click to select files',
+  description:
+    'Attach as many files as you like, each file should not exceed 5mb',
+};

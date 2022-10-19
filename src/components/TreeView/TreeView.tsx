@@ -39,7 +39,7 @@ export const TreeView = ({
               },
             }}
           >
-            <Tree branches={data} border={`1px solid ${COLORS.border}`} />
+            <Tree branches={data} border={`1px solid ${COLORS.grey}`} />
           </SimpleGrid>
         )}
       </TreeViewContext.Consumer>

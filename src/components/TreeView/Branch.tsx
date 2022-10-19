@@ -25,10 +25,10 @@ export const FolderFileButton = ({
       width: '100%',
       display: 'flex',
       justifyContent: 'flex-start',
-      color: COLORS.folder,
+      color: COLORS.dark,
       background: '#FFFFFF',
       ':hover': {
-        background: COLORS.hover,
+        background: COLORS.hoverLight,
       },
     }}
     {...props}

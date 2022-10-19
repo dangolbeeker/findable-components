@@ -72,10 +72,10 @@ export const DocumentCard = ({
                 <Box sx={{ marginRight: 4 }}>
                   <AiFillFolder
                     style={{ display: 'flex' }}
-                    color={COLORS.folder}
+                    color={COLORS.dark}
                   />
                 </Box>
-                <Text size="xs" color={COLORS.folder}>
+                <Text size="xs" color={COLORS.dark}>
                   {buildingCategory}
                 </Text>
               </Box>
@@ -85,10 +85,10 @@ export const DocumentCard = ({
                 <Box sx={{ marginRight: 4 }}>
                   <BsPeopleFill
                     style={{ display: 'flex' }}
-                    color={COLORS.folder}
+                    color={COLORS.dark}
                   />
                 </Box>
-                <Text size="xs" color={COLORS.folder}>
+                <Text size="xs" color={COLORS.dark}>
                   {buildingOwner}
                 </Text>
               </Box>
