@@ -7,7 +7,7 @@ jobs:
     strategy:
       matrix:
         node: ['16.x']
-        os: [ubuntu-latest, macOS-latest]
+        os: [ubuntu-latest]
 
     steps:
       - name: Checkout repo
@@ -32,3 +32,23 @@ jobs:
 
       - name: Build
         run: yarn build
+
+  publish:
+    needs: build
+    name: Publish Package to npmjs
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node: ['16.x']
+        os: [ubuntu-latest]
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+
+      - run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
