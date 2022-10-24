@@ -26,3 +26,4 @@ export const ACCEPTED_FILE_TYPES = {
 
 export const MAX_FILES = 20;
 export const MAX_FILE_SIZE = gbToBytes(5);
+export const MIN_FILE_SIZE = 50;

@@ -3,7 +3,12 @@ import { FileRejection as FileRectionType, useDropzone } from 'react-dropzone';
 import { BsCloudUpload } from 'react-icons/bs';
 import { Box, Card, Group, Text } from '@mantine/core';
 
-import { ACCEPTED_FILE_TYPES, MAX_FILES, MAX_FILE_SIZE } from './config';
+import {
+  ACCEPTED_FILE_TYPES,
+  MAX_FILES,
+  MAX_FILE_SIZE,
+  MIN_FILE_SIZE,
+} from './config';
 import { COLORS } from '../../styles';
 
 export enum ErrorCode {
@@ -30,6 +35,7 @@ export const Dropzone = ({
 }: DropzoneProps) => {
   const { getRootProps, getInputProps } = useDropzone({
     maxFiles: MAX_FILES,
+    minSize: MIN_FILE_SIZE,
     maxSize: MAX_FILE_SIZE,
     accept: ACCEPTED_FILE_TYPES,
     onDropAccepted: (af: File[]) => handleAccepted(af),
