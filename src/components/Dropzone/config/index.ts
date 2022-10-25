@@ -6,8 +6,8 @@ export const ACCEPTED_FILE_TYPES = {
   'image/x-dwg': ['.dwg'],
   'text/*': ['.plain'],
   'application/zip': ['.zip'],
+  'application/x-7z-compressed': ['.7z'],
   // 'application/x-zip-compressed': ['.x-zip-compressed'],
-  // 'application/x-7z-compressed': ['.x-7z-compressed'],
   // 'application/x-rar': ['.x-rar'],
   'application/pdf': ['.pdf'],
   'application/msword': ['.doc'],
@@ -26,4 +26,4 @@ export const ACCEPTED_FILE_TYPES = {
 
 export const MAX_FILES = 20;
 export const MAX_FILE_SIZE = gbToBytes(5);
-export const MIN_FILE_SIZE = 50;
+export const MIN_FILE_SIZE = 1;
