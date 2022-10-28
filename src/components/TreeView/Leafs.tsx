@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Box, Checkbox } from '@mantine/core';
+import { Box, Button, Checkbox, Tooltip } from '@mantine/core';
 import {
   FixedSizeList as List,
   areEqual,
@@ -9,8 +9,8 @@ import memoize from 'memoize-one';
 import { AiOutlineFile } from 'react-icons/ai';
 
 import { useTreeView } from './context';
-import { FolderFileButton } from './Branch';
 import { Category } from './types';
+import { COLORS } from '../../styles';
 
 export const Leaf = ({
   code,
@@ -43,12 +43,30 @@ export const Leaf = ({
             sx={{ paddingLeft: 10 }}
           />
         )}
-        <FolderFileButton
-          leftIcon={!selectMode ? <AiOutlineFile /> : null}
-          onClick={() => handleSelectLeaf(code)}
+        <Tooltip
+          label={name}
+          withArrow
+          color={COLORS.dark}
+          position="bottom-start"
         >
-          {name}
-        </FolderFileButton>
+          <Button
+            size="xs"
+            sx={{
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'flex-start',
+              color: COLORS.dark,
+              background: '#FFFFFF',
+              ':hover': {
+                background: COLORS.hoverLight,
+              },
+            }}
+            leftIcon={!selectMode ? <AiOutlineFile /> : null}
+            onClick={() => handleSelectLeaf(code)}
+          >
+            {name}
+          </Button>
+        </Tooltip>
       </Box>
     </Box>
   );

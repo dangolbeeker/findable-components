@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import { Box, Button, ButtonProps, Checkbox } from '@mantine/core';
+
+import { Box, Button, Checkbox } from '@mantine/core';
 import {
   AiFillFolder,
   AiFillFolderOpen,
@@ -9,33 +10,6 @@ import {
 import { useTreeView } from './context';
 import { COLORS } from '../../styles/colors';
 import { Category } from './types';
-
-interface FolderFileButtonProps
-  extends React.ComponentPropsWithoutRef<'button'> {
-  leftIcon: ButtonProps['leftIcon'];
-}
-
-export const FolderFileButton = ({
-  children,
-  ...props
-}: FolderFileButtonProps) => (
-  <Button
-    size="xs"
-    sx={{
-      width: '100%',
-      display: 'flex',
-      justifyContent: 'flex-start',
-      color: COLORS.dark,
-      background: '#FFFFFF',
-      ':hover': {
-        background: COLORS.hoverLight,
-      },
-    }}
-    {...props}
-  >
-    {children}
-  </Button>
-);
 
 const getFolderIcon = (
   selectMode?: boolean,
@@ -117,12 +91,23 @@ export const Branch = ({
             sx={{ paddingLeft: 10 }}
           />
         )}
-        <FolderFileButton
+        <Button
+          size="xs"
+          sx={{
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'flex-start',
+            color: COLORS.dark,
+            background: '#FFFFFF',
+            ':hover': {
+              background: COLORS.hoverLight,
+            },
+          }}
           leftIcon={getFolderIcon(selectMode, expanded, noFiles)}
           onClick={() => setExpanded(!expanded)}
         >
           {branchName}
-        </FolderFileButton>
+        </Button>
       </Box>
       {expanded && <Box>{children({ overCheck: checked })}</Box>}
     </Box>
