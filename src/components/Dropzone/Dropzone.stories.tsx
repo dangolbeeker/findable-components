@@ -1,8 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { Dropzone, DropzoneProps } from './Dropzone';
-import { FileRejection } from 'react-dropzone';
+import { Dropzone, DropzoneProps, FileRejection } from './Dropzone';
 
 export default {
   title: 'Dropzone',

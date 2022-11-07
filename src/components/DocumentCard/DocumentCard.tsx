@@ -39,6 +39,7 @@ export const DocumentCard = ({
             height={180}
             src={previewUrl}
             withPlaceholder
+            sx={{ overflow: 'hidden' }}
             alt={filename}
           />
         </HoverCard.Target>
@@ -46,10 +47,11 @@ export const DocumentCard = ({
           <Image
             radius="sm"
             width={360}
-            fit="cover"
             height={360}
+            fit="cover"
             src={previewUrl}
             withPlaceholder
+            sx={{ overflow: 'hidden' }}
             alt={filename}
           />
         </HoverCard.Dropdown>
