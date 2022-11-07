@@ -17,78 +17,49 @@ export interface DropdownProps {
   data: Item[];
   value: string | null;
   setValue: Dispatch<SetStateAction<string | null>>;
+  name?: string;
+  label?: string;
+  required?: boolean;
 }
 
-export const Dropdown = ({ data = [], value, setValue }: DropdownProps) => {
+export const Dropdown = ({
+  data = [],
+  value,
+  setValue,
+  name,
+  label,
+  required,
+}: DropdownProps) => {
   return (
     <Select
-      itemComponent={SelectItem}
-      value={value}
-      onChange={setValue}
-      data={data ?? []}
-      searchable
+      itemComponent={forwardRef<HTMLDivElement, ItemProps>(
+        ({ label, description, score, ...others }: ItemProps, ref) => (
+          <Box ref={ref} {...others}>
+            <Group noWrap position="apart">
+              <Box>
+                <Text size="sm">{label}</Text>
+                {description && <Text size="xs">{description}</Text>}
+              </Box>
+              {score && <Text size="xs">{score}%</Text>}
+            </Group>
+          </Box>
+        )
+      )}
       clearable
-      filter={(v, item: Item) =>
-        item.label.toLowerCase().includes(v.toLowerCase().trim())
-      }
-      styles={() => ({
-        item: {
-          // applies styles to selected item
-          '&[data-selected]': {
-            '&, &:hover': {
-              backgroundColor: '#C0E3F9',
-              color: '#2952CC',
-            },
-          },
-
-          // applies styles to hovered item (with mouse or keyboard)
-          '&[data-hovered]': {
-            backgroundColor: '#C0E3F9',
-          },
-        },
-        input: {
-          ':focus': {
-            borderColor: '#C0E3F9',
-          },
-        },
-      })}
+      label={label}
+      name={name}
+      searchable
       transition="pop-top-left"
       transitionDuration={80}
       transitionTimingFunction="ease"
+      withAsterisk={required}
+      value={value}
+      onChange={setValue}
+      data={data ?? []}
+      filter={(v, item: Item) =>
+        item.label.toLowerCase().includes(v.toLowerCase().trim()) ||
+        !!item?.description?.toLowerCase().includes(v.toLowerCase().trim())
+      }
     />
   );
 };
-
-const SelectItem = forwardRef<HTMLDivElement, ItemProps>(
-  ({ label, description, score, ...others }: ItemProps, ref) => (
-    <Box
-      ref={ref}
-      {...others}
-      sx={{
-        marginBottom: 8,
-      }}
-    >
-      <Group noWrap position="apart">
-        <Box>
-          <Text
-            size="sm"
-            weight={score ? 'bold' : ''}
-            color={score ? '#2952CC' : ''}
-          >
-            {label}
-          </Text>
-          {description && (
-            <Text size="xs" color="dimmed">
-              {description}
-            </Text>
-          )}
-        </Box>
-        {score && (
-          <Text size="xs" color="dimmed">
-            {score}%
-          </Text>
-        )}
-      </Group>
-    </Box>
-  )
-);
