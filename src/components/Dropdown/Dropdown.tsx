@@ -1,5 +1,5 @@
 import React, { Dispatch, forwardRef, SetStateAction } from 'react';
-import { Group, Text, Select, Box } from '@mantine/core';
+import { Group, Text, Select, Box, SelectProps } from '@mantine/core';
 
 interface ItemProps extends React.ComponentPropsWithoutRef<'div'> {
   label: string;
@@ -13,7 +13,7 @@ export interface Item
   group?: string;
 }
 
-export interface DropdownProps {
+export interface DropdownComponentProps extends SelectProps {
   data: Item[];
   value: string | null;
   setValue: Dispatch<SetStateAction<string | null>>;
@@ -29,7 +29,8 @@ export const Dropdown = ({
   name,
   label,
   required,
-}: DropdownProps) => {
+  ...props
+}: DropdownComponentProps) => {
   return (
     <Select
       itemComponent={forwardRef<HTMLDivElement, ItemProps>(
@@ -60,6 +61,7 @@ export const Dropdown = ({
         item.label.toLowerCase().includes(v.toLowerCase().trim()) ||
         !!item?.description?.toLowerCase().includes(v.toLowerCase().trim())
       }
+      {...props}
     />
   );
 };
