@@ -103,7 +103,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@mantine/core": "^5.5.0",
-    "@mantine/hooks": "^5.5.0",
+    "@mantine/hooks": "^5.7.1",
     "ag-grid-community": "^28.2.0",
     "ag-grid-react": "^28.2.0",
     "memoize-one": "^6.0.0",

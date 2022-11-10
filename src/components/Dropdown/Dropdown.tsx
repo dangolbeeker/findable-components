@@ -31,25 +31,28 @@ export const Dropdown = ({
   required,
   ...props
 }: DropdownComponentProps) => {
+  const SelectItem = forwardRef<HTMLDivElement, ItemProps>(
+    ({ label, description, score, ...others }: ItemProps, ref) => (
+      <Box ref={ref} {...others}>
+        <Group noWrap position="apart">
+          <Box>
+            <Text size="sm">{label}</Text>
+            {description && <Text size="xs">{description}</Text>}
+          </Box>
+          {score && <Text size="xs">{score}%</Text>}
+        </Group>
+      </Box>
+    )
+  );
+
   return (
     <Select
-      itemComponent={forwardRef<HTMLDivElement, ItemProps>(
-        ({ label, description, score, ...others }: ItemProps, ref) => (
-          <Box ref={ref} {...others}>
-            <Group noWrap position="apart">
-              <Box>
-                <Text size="sm">{label}</Text>
-                {description && <Text size="xs">{description}</Text>}
-              </Box>
-              {score && <Text size="xs">{score}%</Text>}
-            </Group>
-          </Box>
-        )
-      )}
+      itemComponent={SelectItem}
       clearable
       label={label}
       name={name}
       searchable
+      allowDeselect={false}
       transition="pop-top-left"
       transitionDuration={80}
       transitionTimingFunction="ease"
