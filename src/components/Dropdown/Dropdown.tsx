@@ -1,15 +1,20 @@
-import React, { Dispatch, forwardRef, SetStateAction } from 'react';
-import { Group, Text, Select, Box, SelectProps } from '@mantine/core';
+import React, { Dispatch, SetStateAction } from 'react';
+import { Select, Box, SelectProps } from '@mantine/core';
+import { SelectItem } from './SelectItem';
 
-interface ItemProps extends React.ComponentPropsWithoutRef<'div'> {
+export interface ItemProps extends React.ComponentPropsWithoutRef<'div'> {
+  value: string;
   label: string;
+  title: string;
   description?: string;
-  score?: number;
+  suggestionTxt?: string;
 }
 
 export interface Item
-  extends Pick<ItemProps, 'label' | 'description' | 'score'> {
-  value: string;
+  extends Pick<
+    ItemProps,
+    'value' | 'label' | 'title' | 'description' | 'suggestionTxt'
+  > {
   group?: string;
 }
 
@@ -18,8 +23,8 @@ export interface DropdownComponentProps extends SelectProps {
   value: string | null;
   setValue: Dispatch<SetStateAction<string | null>>;
   name?: string;
-  label?: string;
-  required?: boolean;
+  label?: string | React.ReactNode;
+  description?: string | React.ReactNode;
 }
 
 export const Dropdown = ({
@@ -28,43 +33,32 @@ export const Dropdown = ({
   setValue,
   name,
   label,
-  required,
+  description,
   ...props
 }: DropdownComponentProps) => {
-  const SelectItem = forwardRef<HTMLDivElement, ItemProps>(
-    ({ label, description, score, ...others }: ItemProps, ref) => (
-      <Box ref={ref} {...others}>
-        <Group noWrap position="apart">
-          <Box>
-            <Text size="sm">{label}</Text>
-            {description && <Text size="xs">{description}</Text>}
-          </Box>
-          {score && <Text size="xs">{score}%</Text>}
-        </Group>
-      </Box>
-    )
-  );
-
   return (
-    <Select
-      itemComponent={SelectItem}
-      clearable
-      label={label}
-      name={name}
-      searchable
-      allowDeselect={false}
-      transition="pop-top-left"
-      transitionDuration={80}
-      transitionTimingFunction="ease"
-      withAsterisk={required}
-      value={value}
-      onChange={setValue}
-      data={data ?? []}
-      filter={(v, item: Item) =>
-        item.label.toLowerCase().includes(v.toLowerCase().trim()) ||
-        !!item?.description?.toLowerCase().includes(v.toLowerCase().trim())
-      }
-      {...props}
-    />
+    <Box>
+      {label}
+      <Select
+        itemComponent={SelectItem}
+        clearable
+        aria-label={typeof label === 'string' ? label : ''}
+        name={name}
+        searchable
+        allowDeselect={false}
+        transition="pop-top-left"
+        transitionDuration={80}
+        transitionTimingFunction="ease"
+        value={value}
+        onChange={setValue}
+        data={data ?? []}
+        filter={(v, item: Item) =>
+          item.label.toLowerCase().includes(v.toLowerCase().trim()) ||
+          !!item?.description?.toLowerCase().includes(v.toLowerCase().trim())
+        }
+        {...props}
+      />
+      {description}
+    </Box>
   );
 };
