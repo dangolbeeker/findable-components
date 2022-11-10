@@ -9,12 +9,18 @@ export const SelectItem = forwardRef<HTMLDivElement, ItemProps>(
   ) => (
     <Box ref={ref} {...others}>
       <Group noWrap position="apart">
-        <Box sx={{ display: 'flex' }}>
-          <Text sx={{ paddingRight: 6, minWidth: 30 }}>{value}</Text>{' '}
-          <Text sx={{ paddingRight: 6 }}>-</Text>
+        <Box
+          sx={{
+            display: 'flex',
+          }}
+        >
+          <Text sx={{ paddingRight: 4, minWidth: 30 }}>
+            {title ? value : label}
+          </Text>
+          {title && <Text sx={{ paddingRight: 4 }}>-</Text>}
           <Box>
-            <Text>{title}</Text>
-            {description && (
+            {title && <Text>{title}</Text>}
+            {description && title && (
               <Text size="xs" weight="light">
                 {description}
               </Text>

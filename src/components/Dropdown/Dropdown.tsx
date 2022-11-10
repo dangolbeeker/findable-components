@@ -5,7 +5,7 @@ import { SelectItem } from './SelectItem';
 export interface ItemProps extends React.ComponentPropsWithoutRef<'div'> {
   value: string;
   label: string;
-  title: string;
+  title?: string;
   description?: string;
   suggestionTxt?: string;
 }
