@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
 
 import { Dropdown, DropdownComponentProps, Item } from './Dropdown';
+import { SelectItem } from './SelectItem';
 
 export default {
   title: 'Dropdown',
@@ -28,7 +29,6 @@ DropdownComponent.args = {
   data: [
     {
       value: '200',
-      title: 'Bygning, generelt',
       label: '200 - Bygning, generelt',
       group: 'Automatisk forslag til sortering',
       suggestionTxt: 'forslag',
@@ -36,7 +36,6 @@ DropdownComponent.args = {
     },
     {
       value: '117',
-      title: 'Adresselister (leverandører)',
       label: '117 - Adresselister (leverandører)',
       group: 'Automatisk forslag til sortering',
       suggestionTxt: 'forslag',
@@ -44,7 +43,6 @@ DropdownComponent.args = {
     },
     {
       value: '400',
-      title: 'Elkraft, generelt',
       label: '400 - Elkraft, generelt',
       group: 'Automatisk forslag til sortering',
       suggestionTxt: 'forslag',
@@ -53,21 +51,18 @@ DropdownComponent.args = {
     },
     {
       value: '111',
-      title: 'Kjøpskontrakter',
       label: '111 - Kjøpskontrakter',
       group: '',
       description: '',
     },
     {
       value: '112',
-      title: 'Leiekontrakter',
       label: '112 - Leiekontrakter',
       group: '',
       description: '',
     },
     {
       value: '113',
-      title: 'Drifts- og vedlikeholdsavtaler',
       label: '113 - Drifts- og vedlikeholdsavtaler',
       group: '',
       description: '',
@@ -77,3 +72,7 @@ DropdownComponent.args = {
   label: 'Building Categories',
   required: true,
 };
+
+export const SelectItemComponent = () => (
+  <SelectItem label={'200 - Bygning, generelt'} />
+);
