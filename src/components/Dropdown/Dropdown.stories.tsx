@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Text } from '@mantine/core';
+import { Box } from '@mantine/core';
 import { Meta, Story } from '@storybook/react';
 
 import { Dropdown, DropdownComponentProps, Item, ItemProps } from './Dropdown';
