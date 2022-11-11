@@ -1,6 +1,5 @@
-import React, { Dispatch, SetStateAction } from 'react';
-import { Select, Box, SelectProps } from '@mantine/core';
-import { SelectItem } from './SelectItem';
+import React, { Dispatch, forwardRef, SetStateAction } from 'react';
+import { Select, Box, SelectProps, Group, Text, Badge } from '@mantine/core';
 
 export interface ItemProps extends React.ComponentPropsWithoutRef<'div'> {
   value: string;
@@ -36,6 +35,41 @@ export const Dropdown = ({
   description,
   ...props
 }: DropdownComponentProps) => {
+  const SelectItem = forwardRef<HTMLDivElement, ItemProps>(
+    (
+      { label, title, value, description, suggestionTxt, ...others }: ItemProps,
+      ref
+    ) => (
+      <Box ref={ref} {...others}>
+        <Group noWrap position="apart">
+          <Box
+            sx={{
+              display: 'flex',
+            }}
+          >
+            <Text sx={{ paddingRight: 4, minWidth: 30 }}>
+              {title ? value : label}
+            </Text>
+            {title && <Text sx={{ paddingRight: 4 }}>-</Text>}
+            <Box>
+              {title && <Text>{title}</Text>}
+              {description && title && (
+                <Text size="xs" weight="light">
+                  {description}
+                </Text>
+              )}
+            </Box>
+          </Box>
+          {suggestionTxt && (
+            <Badge radius="xs" sx={{ flexShrink: 0 }}>
+              {suggestionTxt}
+            </Badge>
+          )}
+        </Group>
+      </Box>
+    )
+  );
+
   return (
     <Box>
       {label}

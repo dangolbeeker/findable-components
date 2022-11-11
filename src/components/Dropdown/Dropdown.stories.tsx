@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { Box } from '@mantine/core';
 import { Meta, Story } from '@storybook/react';
 
-import { Dropdown, DropdownComponentProps, Item, ItemProps } from './Dropdown';
-import { SelectItem } from './SelectItem';
+import { Dropdown, DropdownComponentProps, Item } from './Dropdown';
 
 export default {
   title: 'Dropdown',
@@ -78,30 +76,4 @@ DropdownComponent.args = {
   name: 'building-categories',
   label: 'Building Categories',
   required: true,
-};
-
-const SelectItemTemplate = (props: ItemProps) => {
-  return (
-    <Box sx={{ padding: 8, border: '1px solid lightblue', borderRadius: 4 }}>
-      <SelectItem
-        value={props.value}
-        label={props.label}
-        title={props.title}
-        description={props.description}
-        suggestionTxt={props.suggestionTxt}
-      />
-    </Box>
-  );
-};
-
-export const SelectItemComponent: Story<ItemProps> = SelectItemTemplate.bind(
-  {}
-);
-
-SelectItemComponent.args = {
-  value: '200',
-  title: 'Bygning, generelt',
-  label: '200 - Bygning, generelt',
-  suggestionTxt: 'forslag',
-  description: 'Omfatter bygningsmessige deler.',
 };
