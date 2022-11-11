@@ -39,35 +39,40 @@ export const Dropdown = ({
     (
       { label, title, value, description, suggestionTxt, ...others }: ItemProps,
       ref
-    ) => (
-      <Box ref={ref} {...others}>
-        <Group noWrap position="apart">
-          <Box
-            sx={{
-              display: 'flex',
-            }}
-          >
-            <Text sx={{ paddingRight: 4, minWidth: 30 }}>
-              {title ? value : label}
-            </Text>
-            {title && <Text sx={{ paddingRight: 4 }}>-</Text>}
-            <Box>
-              {title && <Text>{title}</Text>}
-              {description && title && (
-                <Text size="xs" weight="light">
-                  {description}
-                </Text>
-              )}
+    ) => {
+      const hasTitle =
+        (typeof title === 'string' && title.length > 0) ||
+        typeof title !== undefined;
+      return (
+        <Box ref={ref} {...others}>
+          <Group noWrap position="apart">
+            <Box
+              sx={{
+                display: 'flex',
+              }}
+            >
+              <Text sx={{ paddingRight: 4, minWidth: 30 }}>
+                {hasTitle ? value : label}
+              </Text>
+              {hasTitle && <Text sx={{ paddingRight: 4 }}>-</Text>}
+              <Box>
+                {hasTitle && <Text>{title}</Text>}
+                {description && hasTitle && (
+                  <Text size="xs" weight="light">
+                    {description}
+                  </Text>
+                )}
+              </Box>
             </Box>
-          </Box>
-          {suggestionTxt && (
-            <Badge radius="xs" sx={{ flexShrink: 0 }}>
-              {suggestionTxt}
-            </Badge>
-          )}
-        </Group>
-      </Box>
-    )
+            {suggestionTxt && (
+              <Badge radius="xs" sx={{ flexShrink: 0 }}>
+                {suggestionTxt}
+              </Badge>
+            )}
+          </Group>
+        </Box>
+      );
+    }
   );
 
   return (
