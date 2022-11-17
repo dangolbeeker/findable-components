@@ -32,7 +32,6 @@ export const Leaf = ({
         sx={{
           display: 'flex',
           alignItems: 'center',
-          paddingLeft: 8,
         }}
       >
         {selectMode && (
