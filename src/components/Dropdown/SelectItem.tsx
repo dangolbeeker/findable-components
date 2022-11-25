@@ -10,7 +10,7 @@ export const SelectItem = forwardRef<HTMLDivElement, ItemProps>(
           <Box>
             <Text>{label}</Text>
             {description && (
-              <Text size="xs" weight="light" sx={{ paddingLeft: 38 }}>
+              <Text size="xs" weight="light">
                 {description}
               </Text>
             )}
