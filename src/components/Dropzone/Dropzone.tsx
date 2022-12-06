@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Fragment, useCallback, useRef, useState } from 'react';
 import { FileRejection as FileRectionType, useDropzone } from 'react-dropzone';
-import { BsCloudUpload } from 'react-icons/bs';
+import { RiUploadCloudFill } from 'react-icons/ri';
 import { Box, Card, Group, Text } from '@mantine/core';
 
 import {
@@ -10,6 +10,8 @@ import {
   MIN_FILE_SIZE,
 } from './config';
 import { COLORS } from '../../styles';
+import { DropzoneButton } from './UploadButton';
+import useEventListener from '../../hooks/useEventListener';
 
 export enum ErrorCode {
   FileInvalidType = 'file-invalid-type',
@@ -21,26 +23,49 @@ export enum ErrorCode {
 export type FileRejection = FileRectionType;
 
 export interface DropzoneProps {
-  heading: string;
-  description?: string;
+  label: string;
+  buttonLabel: string;
   handleAccepted: (acceptedFiles: File[]) => void;
   handleRejected: (rejectedFiles: FileRejection[]) => void;
 }
 
 export const Dropzone = ({
-  heading,
-  description,
+  label,
+  buttonLabel,
   handleAccepted,
   handleRejected,
 }: DropzoneProps) => {
-  const { getRootProps, getInputProps } = useDropzone({
+  const documentRef = useRef<Document>(document);
+  const { getRootProps, getInputProps, isDragActive, open } = useDropzone({
+    noClick: true,
+    noKeyboard: true,
     maxFiles: MAX_FILES,
     minSize: MIN_FILE_SIZE,
     maxSize: MAX_FILE_SIZE,
     accept: ACCEPTED_FILE_TYPES,
-    onDropAccepted: (af: File[]) => handleAccepted(af),
-    onDropRejected: (rf: FileRejection[]) => handleRejected(rf),
+    onDropAccepted: (af: File[]) => {
+      handleAccepted(af);
+      handleDragDrop();
+    },
+    onDropRejected: (rf: FileRejection[]) => {
+      handleRejected(rf);
+      handleDragDrop();
+    },
   });
+
+  const [dragging, setDragging] = useState(false);
+
+  const handleDragOver = useCallback(() => {
+    if (dragging) return;
+    setDragging(true);
+  }, [dragging]);
+
+  const handleDragDrop = () => {
+    setDragging(false);
+  };
+
+  useEventListener('dragover', handleDragOver, documentRef);
+  useEventListener('drop', handleDragDrop, documentRef);
 
   return (
     <Card
@@ -48,25 +73,78 @@ export const Dropzone = ({
       sx={{
         borderStyle: 'dashed',
         borderColor: COLORS.grey,
-        cursor: 'pointer',
         transition: 'background 200ms',
-        ':hover': {
-          background: COLORS.hoverLight,
-        },
       }}
       withBorder
     >
+      <Box
+        sx={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          bottom: 0,
+          right: 0,
+          pointerEvents: !dragging ? 'none' : 'initial',
+        }}
+      >
+        {isDragActive && (
+          <Fragment>
+            <Box
+              sx={{
+                position: 'relative',
+                height: '100%',
+                width: '100%',
+                background: '#474D66',
+                opacity: 0.6,
+              }}
+            />
+            <Box
+              sx={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                bottom: 0,
+                right: 0,
+                border: '2px dashed white',
+                borderRadius: 12,
+                margin: 24,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <Box sx={{ textAlign: 'center' }}>
+                <RiUploadCloudFill size={60} color="white" />
+                <Text size="xl" color="white">
+                  {label}
+                </Text>
+              </Box>
+            </Box>
+          </Fragment>
+        )}
+      </Box>
       <input {...getInputProps()} />
-      <Group position="center" sx={{ minHeight: 200 }}>
-        <BsCloudUpload size={50} color={COLORS.dark} />
-        <Box>
-          <Text size="xl" color={COLORS.dark}>
-            {heading}
-          </Text>
-          <Text size="sm" color={COLORS.dark} mt={7}>
-            {description}
-          </Text>
+      <Group
+        position="center"
+        sx={{ minHeight: 200, display: 'flex', flexDirection: 'column' }}
+      >
+        <Box
+          sx={{
+            width: 56,
+            height: 56,
+            borderRadius: '50%',
+            background: '#EDEFF4',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <RiUploadCloudFill size={24} color={COLORS.dark} />
         </Box>
+        <Text size="xl" color={COLORS.dark}>
+          {label}
+        </Text>
+        <DropzoneButton label={buttonLabel} onClick={open} />
       </Group>
     </Card>
   );

@@ -2,6 +2,7 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
 import { Dropzone, DropzoneProps, FileRejection } from './Dropzone';
+import { UploadButton } from './UploadButton';
 
 export default {
   title: 'Dropzone',
@@ -9,8 +10,8 @@ export default {
 
 const DropzoneTemplate = (props: DropzoneProps) => (
   <Dropzone
-    heading={props.heading}
-    description={props.description}
+    label={props.label}
+    buttonLabel={props.buttonLabel}
     handleAccepted={function(acceptedFiles: File[]): void {
       console.log({ acceptedFiles });
     }}
@@ -25,7 +26,18 @@ export const DropzoneComponent: Story<DropzoneProps> = DropzoneTemplate.bind(
 );
 
 DropzoneComponent.args = {
-  heading: 'Drag images here or click to select files',
-  description:
-    'Attach as many files as you like, each file should not exceed 5mb',
+  label: 'Drag images here or click to select files',
+  buttonLabel: 'Select files',
 };
+
+export const UploadButtonComponent = () => (
+  <UploadButton
+    label="Select files"
+    handleAccepted={function(acceptedFiles: File[]): void {
+      console.log({ acceptedFiles });
+    }}
+    handleRejected={function(rejectedFiles: FileRejection[]): void {
+      console.log({ rejectedFiles });
+    }}
+  />
+);
