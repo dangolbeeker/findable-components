@@ -3,7 +3,7 @@ import { useDropzone } from 'react-dropzone';
 import { Button } from '@mantine/core';
 import { BiCloudUpload } from 'react-icons/bi';
 
-import { MAX_FILES, MIN_FILE_SIZE, MAX_FILE_SIZE } from './config';
+import { MIN_FILE_SIZE, MAX_FILE_SIZE } from './config';
 import { COLORS } from '../../styles';
 import { FileRejection } from './Dropzone';
 
@@ -36,7 +36,6 @@ export const UploadButton = ({
   const { getRootProps, getInputProps, open } = useDropzone({
     noClick: true,
     noKeyboard: true,
-    maxFiles: MAX_FILES,
     minSize: MIN_FILE_SIZE,
     maxSize: MAX_FILE_SIZE,
     onDropAccepted: (af: File[]) => handleAccepted(af),
