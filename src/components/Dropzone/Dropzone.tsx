@@ -84,6 +84,7 @@ export const Dropzone = ({
           left: 0,
           bottom: 0,
           right: 0,
+          zIndex: 5,
           pointerEvents: !dragging ? 'none' : 'initial',
         }}
       >
@@ -95,7 +96,7 @@ export const Dropzone = ({
                 height: '100%',
                 width: '100%',
                 background: '#474D66',
-                opacity: 0.6,
+                opacity: 0.8,
               }}
             />
             <Box
