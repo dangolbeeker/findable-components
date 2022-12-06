@@ -26,7 +26,7 @@ export const DropzoneButton = ({ label, ...props }: DropzoneButtonProps) => (
   <Button
     variant="outline"
     leftIcon={<BiCloudUpload size={16} color={COLORS.dark} />}
-    sx={{ color: COLORS.dark, borderColor: COLORS.dark }}
+    sx={{ color: COLORS.dark, borderColor: COLORS.grey, background: 'white' }}
     {...props}
   >
     {label}
@@ -44,7 +44,6 @@ export const UploadButton = ({
     maxFiles: MAX_FILES,
     minSize: MIN_FILE_SIZE,
     maxSize: MAX_FILE_SIZE,
-    accept: ACCEPTED_FILE_TYPES,
     onDropAccepted: (af: File[]) => handleAccepted(af),
     onDropRejected: (rf: FileRejection[]) => handleRejected(rf),
   });
@@ -52,15 +51,9 @@ export const UploadButton = ({
   return (
     <div {...getRootProps()}>
       <input {...getInputProps()} />
-      <Button
-        type="button"
-        onClick={open}
-        variant="outline"
-        leftIcon={<BiCloudUpload size={16} color={COLORS.dark} />}
-        sx={{ color: COLORS.dark, borderColor: COLORS.dark }}
-      >
+      <DropzoneButton label={label} type="button" onClick={open}>
         {label}
-      </Button>
+      </DropzoneButton>
     </div>
   );
 };

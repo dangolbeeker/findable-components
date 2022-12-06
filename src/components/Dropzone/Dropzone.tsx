@@ -42,7 +42,6 @@ export const Dropzone = ({
     maxFiles: MAX_FILES,
     minSize: MIN_FILE_SIZE,
     maxSize: MAX_FILE_SIZE,
-    accept: ACCEPTED_FILE_TYPES,
     onDropAccepted: (af: File[]) => {
       handleAccepted(af);
       handleDragDrop();
