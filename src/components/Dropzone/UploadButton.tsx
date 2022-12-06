@@ -3,12 +3,7 @@ import { useDropzone } from 'react-dropzone';
 import { Button } from '@mantine/core';
 import { BiCloudUpload } from 'react-icons/bi';
 
-import {
-  MAX_FILES,
-  MIN_FILE_SIZE,
-  MAX_FILE_SIZE,
-  ACCEPTED_FILE_TYPES,
-} from './config';
+import { MAX_FILES, MIN_FILE_SIZE, MAX_FILE_SIZE } from './config';
 import { COLORS } from '../../styles';
 import { FileRejection } from './Dropzone';
 

@@ -4,12 +4,7 @@ import { RiUploadCloudFill } from 'react-icons/ri';
 import { Box, Card, Group, Text } from '@mantine/core';
 import { useEventListener } from 'usehooks-ts';
 
-import {
-  ACCEPTED_FILE_TYPES,
-  MAX_FILES,
-  MAX_FILE_SIZE,
-  MIN_FILE_SIZE,
-} from './config';
+import { MAX_FILES, MAX_FILE_SIZE, MIN_FILE_SIZE } from './config';
 import { COLORS } from '../../styles';
 import { DropzoneButton } from './UploadButton';
 
