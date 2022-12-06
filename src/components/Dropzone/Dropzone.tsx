@@ -2,6 +2,7 @@ import React, { Fragment, useCallback, useRef, useState } from 'react';
 import { FileRejection as FileRectionType, useDropzone } from 'react-dropzone';
 import { RiUploadCloudFill } from 'react-icons/ri';
 import { Box, Card, Group, Text } from '@mantine/core';
+import { useEventListener } from 'usehooks-ts';
 
 import {
   ACCEPTED_FILE_TYPES,
@@ -11,7 +12,6 @@ import {
 } from './config';
 import { COLORS } from '../../styles';
 import { DropzoneButton } from './UploadButton';
-import useEventListener from '../../hooks/useEventListener';
 
 export enum ErrorCode {
   FileInvalidType = 'file-invalid-type',
