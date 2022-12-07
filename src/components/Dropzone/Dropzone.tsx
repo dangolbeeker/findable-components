@@ -1,4 +1,4 @@
-import React, { Fragment, useCallback, useRef, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import { FileRejection as FileRectionType, useDropzone } from 'react-dropzone';
 import { RiUploadCloudFill } from 'react-icons/ri';
 import { Box, Card, Group, Text } from '@mantine/core';
@@ -7,6 +7,7 @@ import { useEventListener } from 'usehooks-ts';
 import { MAX_FILE_SIZE, MIN_FILE_SIZE } from './config';
 import { COLORS } from '../../styles';
 import { DropzoneButton } from './UploadButton';
+import { Overlay } from './Overlay';
 
 export enum ErrorCode {
   FileInvalidType = 'file-invalid-type',
@@ -70,53 +71,18 @@ export const Dropzone = ({
       }}
       withBorder
     >
-      <Box
-        sx={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          bottom: 0,
-          right: 0,
-          zIndex: 5,
-          pointerEvents: !dragging ? 'none' : 'initial',
-        }}
+      <Overlay
+        dragging={dragging}
+        setDragging={setDragging}
+        isDragActive={isDragActive}
       >
-        {isDragActive && (
-          <Fragment>
-            <Box
-              sx={{
-                position: 'relative',
-                height: '100%',
-                width: '100%',
-                background: '#474D66',
-                opacity: 0.8,
-              }}
-            />
-            <Box
-              sx={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                bottom: 0,
-                right: 0,
-                border: '2px dashed white',
-                borderRadius: 12,
-                margin: 24,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              <Box sx={{ textAlign: 'center' }}>
-                <RiUploadCloudFill size={60} color="white" />
-                <Text size="xl" color="white">
-                  {label}
-                </Text>
-              </Box>
-            </Box>
-          </Fragment>
-        )}
-      </Box>
+        <Box sx={{ textAlign: 'center' }}>
+          <RiUploadCloudFill size={60} color="white" />
+          <Text size="xl" color="white">
+            {label}
+          </Text>
+        </Box>
+      </Overlay>
       <input {...getInputProps()} />
       <Group
         position="center"
